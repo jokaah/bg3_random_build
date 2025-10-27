@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass(frozen=True)
 class Defaults:
     level_cap: int = 12
@@ -12,22 +13,11 @@ class Defaults:
     name_max_hooks: int = 1
     use_adjective: bool = True
 
-DEFAULTS = Defaults(
-    level_cap=12,
-    num_subclasses_weights={1: 0.05, 2: 0.45, 3: 0.40, 4: 0.10},
-    show_parent_in_label=False,
-    require_ea_if_martial=True,
-    prefer_ea_if_hybrid=0.7,
-    breakpoints_path="breakpoints.csv",
-    themes_path="themes.csv",
-    name_max_hooks=1,
-    use_adjective=True,
-)
 
-# Role groupings and thresholds are fairly static; keep here.
+DEFAULTS = Defaults(num_subclasses_weights={1: 0.05, 2: 0.45, 3: 0.40, 4: 0.10})
+
 MARTIAL_PARENTS = {"Barbarian", "Fighter", "Paladin", "Ranger", "Rogue", "Monk"}
 CASTER_PARENTS = {"Wizard", "Sorcerer", "Warlock", "Cleric", "Druid", "Bard"}
-
 EA_PARENT_THRESHOLDS = {"Barbarian": 5, "Fighter": 5, "Paladin": 5, "Ranger": 5, "Monk": 5}
 EA_SUBCLASS_THRESHOLDS = {("Bard", "Valour"): 6, ("Bard", "Sword"): 6, ("Wizard", "Bladesinging"): 6}
 
@@ -52,7 +42,6 @@ SECONDARY_SUFFIX_BY_COMP = {
     "hybrid": ["Spellblade", "Battlemage", "Magus"],
 }
 
-# Flavor hooks for optional name spice.
 FLAVOR_MAP = {
     "Rogue": ["Shadow", "Knave", "Phantom", "Veil", "Skulk"],
     "Paladin": ["Oath", "Vow", "Sanctum", "Aegis", "Pledge"],

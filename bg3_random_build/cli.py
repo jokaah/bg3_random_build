@@ -1,7 +1,11 @@
-import argparse, sys, random
+import argparse
+import random
+import sys
+
 from .config import DEFAULTS
 from .data_io import load_breakpoints, load_themes
 from .logic import suggest_many
+
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
@@ -18,6 +22,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--no-theme", action="store_true", help="Disable adjective in names and omit themed blurb.")
     p.add_argument("--seed", type=int, default=None, help="Random seed for reproducibility.")
     return p
+
 
 def main(argv=None) -> int:
     argv = argv if argv is not None else sys.argv[1:]
@@ -50,9 +55,12 @@ def main(argv=None) -> int:
         use_adjective=not args.no_theme,
         include_blurb=not args.no_theme,
     )
+
     for name, line in builds:
         print(name, line)
+
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -1,12 +1,11 @@
 import pathlib
-import random
+
 import streamlit as st
 
 from bg3_random_build.config import DEFAULTS
 from bg3_random_build.data_io import load_breakpoints, load_themes
 from bg3_random_build.logic import suggest_many
 
-# Resolve data paths relative to this file location
 HERE = pathlib.Path(__file__).resolve().parent
 DEFAULT_BREAKPOINTS = HERE / DEFAULTS.breakpoints_path
 DEFAULT_THEMES = HERE / DEFAULTS.themes_path
@@ -40,15 +39,7 @@ if err:
     st.stop()
 
 if st.button("Generate"):
-    builds = suggest_many(
-        sub_bps,
-        themes,
-        theme_reqs,
-        n=int(n),
-        use_adjective=include_theme,
-        include_blurb=include_theme,
-    )
-    for name, line in builds:
+    for name, line in suggest_many(sub_bps, themes, theme_reqs, n=int(n), use_adjective=include_theme, include_blurb=include_theme):
         with st.container(border=True):
             st.markdown(f"### {name}")
             st.write(line)
