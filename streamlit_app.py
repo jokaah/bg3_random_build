@@ -16,16 +16,14 @@ st.set_page_config(page_title="BG3 Random Build Generator", page_icon="🎲", la
 st.title("🎲 BG3 Random Build Generator")
 st.caption("Generate random, probably silly, BG3 build suggestions. See it as a challenge ;)")
 
-# Single parameter as requested
 n = st.number_input("Number of builds", min_value=1, max_value=20, value=4, step=1)
 
-with st.sidebar:
-    st.subheader("Data files")
-    st.markdown(f"- **breakpoints:** `{DEFAULT_BREAKPOINTS.name}`")
-    st.markdown(f"- **themes:** `{DEFAULT_THEMES.name}`")
-    st.caption("Place custom CSVs next to this app and adapt code if needed.")
+include_theme = st.checkbox(
+    "Include build \"theme\" (might be silly)",
+    value=True,
+    help="When off, only suggest class levels and simple names."
+)
 
-# Data loading
 err = None
 try:
     sub_bps = load_breakpoints(str(DEFAULT_BREAKPOINTS))
@@ -41,11 +39,16 @@ if err:
     st.error(err)
     st.stop()
 
-# Action
 if st.button("Generate"):
-    # optional seed? not exposed as a parameter, but keep possibility for reproducibility if needed
-    builds = suggest_many(sub_bps, themes, theme_reqs, n=int(n))
-    for idx, (name, line) in enumerate(builds, 1):
+    builds = suggest_many(
+        sub_bps,
+        themes,
+        theme_reqs,
+        n=int(n),
+        use_adjective=include_theme,
+        include_blurb=include_theme,
+    )
+    for name, line in builds:
         with st.container(border=True):
-            st.markdown(f"### {idx}. {name}")
+            st.markdown(f"### {name}")
             st.write(line)

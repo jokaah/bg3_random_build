@@ -208,12 +208,13 @@ def build_name_and_blurb(picks: List[SubBreakpoint],
 
     return " ".join(parts), blurb
 
-def format_build(picks: List[SubBreakpoint], final_levels: Dict[Tuple[str, str], int], blurb: str, show_parent_in_label: bool) -> str:
+def format_build(picks: List[SubBreakpoint], final_levels: Dict[Tuple[str, str], int], blurb: str, show_parent_in_label: bool, include_blurb: bool = True) -> str:
     parts = []
     for bp in picks:
         key = (bp.subclass, bp.parent_class)
         parts.append(bp.label(final_levels[key], show_parent=show_parent_in_label))
-    return f"{' / '.join(sorted(parts))} ({blurb})"
+    core = ' / '.join(sorted(parts))
+    return f"{core} ({blurb})" if include_blurb and blurb else core
 
 def suggest_build(
         sub_bps: List[SubBreakpoint],
@@ -227,6 +228,7 @@ def suggest_build(
         prefer_ea_if_hybrid: float = DEFAULTS.prefer_ea_if_hybrid,
         name_max_hooks: int = DEFAULTS.name_max_hooks,
         use_adjective: bool = DEFAULTS.use_adjective,
+        include_blurb: bool = True,
 ) -> Tuple[str, str]:
     if num_subclass_weights is None:
         num_subclass_weights = DEFAULTS.num_subclasses_weights
@@ -259,7 +261,7 @@ def suggest_build(
                 continue
 
             name, blurb = build_name_and_blurb(picks, finals, themes, theme_requirements, name_max_hooks, use_adjective)
-            line = format_build(picks, finals, blurb, show_parent_in_label)
+            line = format_build(picks, finals, blurb, show_parent_in_label, include_blurb=include_blurb)
             return (name + ":", line)
 
     raise RuntimeError("No valid combination found. Consider adding lower-level breakpoints or allowing fewer subclasses.")

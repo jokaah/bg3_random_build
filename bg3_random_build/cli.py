@@ -15,6 +15,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--show-parent-in-label", action="store_true", help="Show parent class in label.")
     p.add_argument("--no-ea-if-martial", dest="ea_if_martial", action="store_false", help="Do not require Extra Attack for pure martial comps.")
     p.add_argument("--prefer-ea-if-hybrid", type=float, default=DEFAULTS.prefer_ea_if_hybrid, help="Probability to prefer EA for hybrid comps (0-1).")
+    p.add_argument("--no-theme", action="store_true", help="Disable adjective in names and omit themed blurb.")
     p.add_argument("--seed", type=int, default=None, help="Random seed for reproducibility.")
     return p
 
@@ -46,6 +47,8 @@ def main(argv=None) -> int:
         show_parent_in_label=args.show_parent_in_label,
         require_ea_if_martial=args.ea_if_martial,
         prefer_ea_if_hybrid=args.prefer_ea_if_hybrid,
+        use_adjective=not args.no_theme,
+        include_blurb=not args.no_theme,
     )
     for name, line in builds:
         print(name, line)
