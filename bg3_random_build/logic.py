@@ -239,7 +239,8 @@ def build_name_and_blurb(picks: List[SubBreakpoint],
     return " ".join(parts), blurb
 
 
-def format_build(picks: List[SubBreakpoint], final_levels: Dict[Tuple[str, str], int], blurb: str, show_parent_in_label: bool, include_blurb: bool = True) -> str:
+def format_build(picks: List[SubBreakpoint], final_levels: Dict[Tuple[str, str], int], blurb: str, show_parent_in_label: bool,
+                 include_blurb: bool = True) -> str:
     parts = []
     for bp in picks:
         key = (bp.subclass, bp.parent_class)
@@ -292,12 +293,13 @@ def suggest_build(sub_bps: List[SubBreakpoint],
 
             name, blurb = build_name_and_blurb(picks, finals, themes, theme_requirements, name_max_hooks, use_adjective)
             line = format_build(picks, finals, blurb, show_parent_in_label, include_blurb=include_blurb)
-            return name + ":", line
+            return name, line
 
     raise RuntimeError("No valid combination found.")
 
 
-def suggest_many(sub_bps: List[SubBreakpoint], themes: Dict[str, str], theme_requirements: Dict[str, set], n: int = 4, **kwargs) -> List[Tuple[str, str]]:
+def suggest_many(sub_bps: List[SubBreakpoint], themes: Dict[str, str], theme_requirements: Dict[str, set], n: int = 4, **kwargs) -> List[
+    Tuple[str, str]]:
     out = []
     for _ in range(n):
         name, line = suggest_build(sub_bps, themes, theme_requirements, **kwargs)

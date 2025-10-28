@@ -65,3 +65,51 @@ Volcanic,magma-themed explosive damage,Sorcerer;Wizard
 Warforged,relentless machine-like onslaught,Fighter;Paladin;Ranger
 Whispering,subtle control and intrigue,Bard;Rogue;Warlock
 Wyrmblooded,draconic heritage and breath,Barbarian;Fighter;Sorcerer
+Abyssal,chaotic infernal power and destruction,Warlock;Sorcerer;Cleric
+Amber,lightning-fast reflexes and golden energy,Bard;Fighter;Sorcerer
+Auric,sun-blessed radiance and command,Cleric;Paladin;Bard
+Bramble,thorny druidic nature control,Druid;Ranger
+Carnal,bloodlust-fueled primal instincts,Barbarian;Warlock;Rogue
+Celestial,divine light meets cosmic magic,Cleric;Paladin;Sorcerer
+Chained,enslaved power barely contained,Warlock;Barbarian
+Chimeric,hybrid beast or mutant experimentation,Barbarian;Druid;Fighter
+lockwork,precision automaton-style control,Fighter;Wizard;Artificer
+Coral,deep-sea mystic of tides and currents,Druid;Sorcerer
+Crystalline,gem-themed resonance and defense,Sorcerer;Wizard;Paladin
+Dreadmarked,bearer of an ancient curse,Warlock;Rogue;Wizard
+Echoing,illusion and sound-based trickery,Bard;Wizard
+Eclipsed,balance between light and shadow,Cleric;Warlock;Wizard
+Emberforged,born of flame and steel,Sorcerer;Fighter;Warlock
+Galeheart,stormbringer and master of winds,Bard;Sorcerer;Wizard
+Gravesworn,servant of death’s domain,Cleric;Warlock
+Hollow,emotionless husk wielding eerie calm,Monk;Warlock
+Infernal,devil pact fire and domination,Warlock;Sorcerer
+Jade,disciplined serenity and nature’s grace,Monk;Druid;Ranger
+Marbled,stately perfection and petrified beauty,Paladin;Wizard
+Mistborn,fog and illusion manipulation,Rogue;Wizard
+Moonlit,lunar grace and radiant deception,Cleric;Rogue;Wizard
+Opaline,reflective brilliance and protection,Paladin;Bard
+Phantasmal,ghostly illusion and misdirection,Bard;Warlock;Wizard
+Pyric,fire magic at any cost,Sorcerer;Warlock;Wizard
+Quicksilver,agility and relentless adaptability,Monk;Rogue;Fighter
+Riftborn,tears through space and time,Wizard;Sorcerer;Warlock
+Rotwood,swamp and decay druidic corruption,Druid;Warlock
+Runebreaker,anti-magic martial chaos,Fighter;Barbarian
+Sanguine,blood-fueled vitality and rage,Barbarian;Warlock;Sorcerer
+Seaborn,tidal mastery and water blessings,Cleric;Druid;Sorcerer
+Serpentine,poison and cunning strikes,Rogue;Ranger;Druid
+Shattered,trauma-forged survivor grit,Barbarian;Fighter;Monk
+Skyforged,champion of the open skies,Bard;Ranger;Paladin
+Spectral,ghostly ethereal manifestation,Cleric;Warlock;Wizard
+Starborn,cosmic destiny and radiant awe,Sorcerer;Cleric;Wizard
+Tidebound,master of water and flow,Druid;Sorcerer;Ranger
+Trickwoven,arcane mischief and deception,Bard;Rogue;Wizard
+Umberdeep,abyssal shadow diver,Warlock;Rogue
+Veinforged,blood and metal intertwined,Barbarian;Fighter
+Vermillion,burning passion and fury,Barbarian;Bard;Sorcerer
+Voidtouched,entropy and nothingness made flesh,Warlock;Wizard
+Warden,protector of balance and borders,Druid;Ranger;Paladin
+Wildfire,untamed flame and chaos incarnate,Druid;Sorcerer;Barbarian
+Windborne,freedom and speed personified,Monk;Ranger;Bard
+Wyrmforged,crafted in draconic image,Fighter;Paladin;Sorcerer
+Zephyric,airy grace and movement,Monk;Ranger;Bard
