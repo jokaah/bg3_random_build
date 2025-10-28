@@ -1,6 +1,4 @@
-# BG3 Random Build Generator (Refactor)
-
-Clean, modular refactor with argparse and CSV-driven themes.
+# BG3 Random Build Generator
 
 ## Files
 - `bg3_random_build/` package:
