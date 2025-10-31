@@ -2,6 +2,7 @@ adjective,blurb,requirements
 Arcane,pure arcane prowess,Sorcerer;Wizard
 Ashen,fire-themed brawler or phoenix rebirth vibe,Sorcerer;Warlock;Wizard
 Astral,planar traveler with cosmic magic,Sorcerer;Warlock;Wizard
+Aquatic,flood the battlefield,Sorcerer;Wizard;Cleric
 Battleworn,pragmatic martial all-rounder,Barbarian;Fighter;Paladin;Ranger
 Blighted,rot/decay corruption gameplay,Cleric;Druid
 Blood-stained,battle-hardened brutality,Barbarian;Fighter;Rogue
@@ -27,6 +28,7 @@ Grim,necrotic/bleak battlefield presence,Cleric;Warlock;Wizard
 Hallowed,holy devotion and radiant smites,Cleric;Paladin
 Haunted,ghostly curses and fear,Cleric;Warlock;Wizard
 Hexborn,cursed hexes and debuffs,Warlock
+Illithid,embrace the tadpole,Bard;Barbarian;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard
 Ironbound,unyielding defensive frontline,Barbarian;Fighter;Paladin
 Lunar,moon/shadow duality and illusion,Cleric;Druid;Wizard
 Mythic,legend-grade heroics,Barbarian;Cleric;Fighter;Paladin;Sorcerer;Wizard
