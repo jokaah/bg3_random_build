@@ -1,13 +1,11 @@
 adjective,blurb,requirements
 Arcane,pure arcane prowess,Sorcerer;Wizard
 Ashen,fire-themed brawler or phoenix rebirth vibe,Sorcerer;Warlock;Wizard
-Astral,planar traveler with cosmic magic,Sorcerer;Warlock;Wizard
 Aquatic,flood the battlefield,Sorcerer;Wizard;Cleric
 Battleworn,pragmatic martial all-rounder,Barbarian;Fighter;Paladin;Ranger
 Blighted,rot/decay corruption gameplay,Cleric;Druid
 Blood-stained,battle-hardened brutality,Barbarian;Fighter;Rogue
 Blooded,scarred veteran melee specialist,Barbarian;Fighter;Rogue
-Chronal,time-bending foresight and control,Wizard
 Cinder,smoldering aggression,Sorcerer;Warlock;Wizard
 Crimson,brutal crit-focused finisher,Barbarian;Rogue;Warlock
 Cursed,risk-reward cursed power,Sorcerer;Warlock
@@ -28,21 +26,14 @@ Grim,necrotic/bleak battlefield presence,Cleric;Warlock;Wizard
 Hallowed,holy devotion and radiant smites,Cleric;Paladin
 Haunted,ghostly curses and fear,Cleric;Warlock;Wizard
 Hexborn,cursed hexes and debuffs,Warlock
-Illithid,embrace the tadpole,Bard;Barbarian;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard
 Ironbound,unyielding defensive frontline,Barbarian;Fighter;Paladin
 Lunar,moon/shadow duality and illusion,Cleric;Druid;Wizard
-Mythic,legend-grade heroics,Barbarian;Cleric;Fighter;Paladin;Sorcerer;Wizard
 Necrotic,death-themed minions and damage,Cleric;Warlock;Wizard
 Nightborne,thrives under darkness,Monk;Rogue;Warlock;Wizard
 Oathsworn,honor-bound divine warrior,Paladin
-Planar,realm-walking versatility,Cleric;Sorcerer;Warlock;Wizard
-Primeval,ancient primal forces,Barbarian;Druid;Ranger
 Profane,unholy devotion and dark rites,Cleric;Warlock
 Radiant,light-themed healing and offense,Bard;Cleric;Paladin
 Redeemed,righteous rebirth from darkness,Cleric;Paladin
-Runebound,rune-enhanced strikes and wards,Sorcerer;Warlock;Wizard
-Runewrought,crafted by ancient sigils,Fighter;Wizard
-Runic,symbol-driven dwarven magic,Fighter;Wizard
 Seraphic,angelic protector vibe,Cleric;Paladin
 Shadowed,stealth and ambush focus,Monk;Rogue;Warlock;Wizard
 Shadowforged,assassinous craft and weapon mastery,Rogue;Warlock;Wizard
@@ -51,9 +42,7 @@ Solar,radiant-themed smites and healing,Paladin
 Soulbound,spirit and pact-bound powers,Cleric;Warlock
 Spellwoven,refined arcane control and buffs,Sorcerer;Warlock;Wizard
 Spellwrought,magic-tempered warrior,Sorcerer;Warlock;Wizard
-Star-forged,cosmic-forged resilience,Paladin;Warlock;Wizard
 Steelhearted,valor-themed disciplined fighter,Fighter;Paladin
-Stoneforged,dwarven endurance and grit,Barbarian;Fighter
 Storm-touched,storm-kissed melee-caster,Bard;Druid;Sorcerer;Wizard
 Sunlit,bright radiant approach,Bard;Cleric;Paladin
 Tempestborn,storm-themed speed and knockbacks,Bard;Druid;Sorcerer;Wizard
@@ -64,20 +53,13 @@ Veiled,concealed agent tactics,Monk;Rogue;Warlock
 Verdant,nature/poison-themed battlefield control,Druid;Ranger
 Vigilant,watchful sentinel and defender,Cleric;Paladin;Ranger
 Volcanic,magma-themed explosive damage,Sorcerer;Wizard
-Warforged,relentless machine-like onslaught,Fighter;Paladin;Ranger
 Whispering,subtle control and intrigue,Bard;Rogue;Warlock
 Wyrmblooded,draconic heritage and breath,Barbarian;Fighter;Sorcerer
-Abyssal,chaotic infernal power and destruction,Warlock;Sorcerer;Cleric
 Amber,lightning-fast reflexes and golden energy,Bard;Fighter;Sorcerer
 Auric,sun-blessed radiance and command,Cleric;Paladin;Bard
 Bramble,thorny druidic nature control,Druid;Ranger
-Carnal,bloodlust-fueled primal instincts,Barbarian;Warlock;Rogue
-Celestial,divine light meets cosmic magic,Cleric;Paladin;Sorcerer
 Chained,enslaved power barely contained,Warlock;Barbarian
-Chimeric,hybrid beast or mutant experimentation,Barbarian;Druid;Fighter
-Clockwork,precision automaton-style control,Fighter;Wizard;Artificer
 Coral,deep-sea mystic of tides and currents,Druid;Sorcerer
-Crystalline,gem-themed resonance and defense,Sorcerer;Wizard;Paladin
 Dreadmarked,bearer of an ancient curse,Warlock;Rogue;Wizard
 Echoing,illusion and sound-based trickery,Bard;Wizard
 Eclipsed,balance between light and shadow,Cleric;Warlock;Wizard
@@ -87,31 +69,32 @@ Gravesworn,servant of death’s domain,Cleric;Warlock
 Hollow,emotionless husk wielding eerie calm,Monk;Warlock
 Infernal,devil pact fire and domination,Warlock;Sorcerer
 Jade,disciplined serenity and nature’s grace,Monk;Druid;Ranger
-Marbled,stately perfection and petrified beauty,Paladin;Wizard
 Mistborn,fog and illusion manipulation,Rogue;Wizard
 Moonlit,lunar grace and radiant deception,Cleric;Rogue;Wizard
-Opaline,reflective brilliance and protection,Paladin;Bard
 Phantasmal,ghostly illusion and misdirection,Bard;Warlock;Wizard
 Pyric,fire magic at any cost,Sorcerer;Warlock;Wizard
 Quicksilver,agility and relentless adaptability,Monk;Rogue;Fighter
-Riftborn,tears through space and time,Wizard;Sorcerer;Warlock
 Rotwood,swamp and decay druidic corruption,Druid;Warlock
-Runebreaker,anti-magic martial chaos,Fighter;Barbarian
 Sanguine,blood-fueled vitality and rage,Barbarian;Warlock;Sorcerer
 Seaborn,tidal mastery and water blessings,Cleric;Druid;Sorcerer
 Serpentine,poison and cunning strikes,Rogue;Ranger;Druid
 Shattered,trauma-forged survivor grit,Barbarian;Fighter;Monk
-Skyforged,champion of the open skies,Bard;Ranger;Paladin
 Spectral,ghostly ethereal manifestation,Cleric;Warlock;Wizard
-Starborn,cosmic destiny and radiant awe,Sorcerer;Cleric;Wizard
 Tidebound,master of water and flow,Druid;Sorcerer;Ranger
 Trickwoven,arcane mischief and deception,Bard;Rogue;Wizard
-Umberdeep,abyssal shadow diver,Warlock;Rogue
-Veinforged,blood and metal intertwined,Barbarian;Fighter
 Vermillion,burning passion and fury,Barbarian;Bard;Sorcerer
-Voidtouched,entropy and nothingness made flesh,Warlock;Wizard
 Warden,protector of balance and borders,Druid;Ranger;Paladin
 Wildfire,untamed flame and chaos incarnate,Druid;Sorcerer;Barbarian
 Windborne,freedom and speed personified,Monk;Ranger;Bard
-Wyrmforged,crafted in draconic image,Fighter;Paladin;Sorcerer
 Zephyric,airy grace and movement,Monk;Ranger;Bard
+Absolutist,zealous believer in the Absolute’s dominion,Cleric;Paladin;Warlock
+Sharbound,devotee of Shar’s darkness and loss,Cleric;Warlock;Rogue
+Selûnite,blessed by the moon goddess of light and renewal,Cleric;Druid;Paladin
+Githborn,disciplined warrior trained among the githyanki,Fighter;Monk;Wizard
+Spawned,embraces vampiric hunger and power,Rogue;Warlock;Barbarian
+Harper,idealistic secret agent working in the shadows,Bard;Ranger;Rogue
+Zhentarim,ruthless operative with mercantile underworld ties,Rogue;Fighter
+Bhaalspawn,murder in the blood and destiny in the blade,Rogue;Warlock;Fighter
+Hellsworn,infernal vows sealed in blood,Warlock;Paladin
+Tadpoled,mortal will twisted by an illithid tadpole,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard
+Flayer-touched,psionic mutations awaken unsettling talents,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard
