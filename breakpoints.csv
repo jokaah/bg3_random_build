@@ -8,11 +8,10 @@ Wildheart,5,Barbarian
 Wildheart,7,Barbarian
 Wildheart,11,Barbarian
 Wildmagic Barbarian,5,Barbarian
-Wildmagic Barbarian,5,Barbarian
 Wildmagic Barbarian,7,Barbarian
-Wildmagic Barbarian,11,Barbarian
 Giant,6,Barbarian
 Giant,6,Barbarian
+Giant,9,Barbarian
 Giant,10,Barbarian
 Lore,3,Bard
 Lore,6,Bard
@@ -74,11 +73,11 @@ Arcane Archer,11,Fighter
 Eldritch Knight,7,Fighter
 Eldritch Knight,7,Fighter
 Eldritch Knight,11,Fighter
-Monk,1,Monk
-Monk,1,Monk
+Open Hand,6,Monk
 Open Hand,6,Monk
 Open Hand,6,Monk
 Open Hand,9,Monk
+Shadow Monk,6,Monk
 Shadow Monk,6,Monk
 Shadow Monk,6,Monk
 Shadow Monk,11,Monk
@@ -168,6 +167,7 @@ Wizard,1,Wizard
 Wizard,1,Wizard
 Abjuration,10,Wizard
 Bladesinging,6,Wizard
+Bladesinging,6,Wizard
 Bladesinging,9,Wizard
 Conjuration,2,Wizard
 Divination,2,Wizard
@@ -179,3 +179,4 @@ Illusion,10,Wizard
 Necromancy,2,Wizard
 Necromancy,6,Wizard
 Transmutation,6,Wizard
+
