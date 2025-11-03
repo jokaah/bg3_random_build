@@ -1,6 +1,5 @@
 adjective,blurb,requirements
 Arcane,pure arcane prowess,Sorcerer;Wizard
-Aquatic,flood the battlefield,Sorcerer;Wizard;Cleric;Druid
 Blighted,rot/decay corruption gameplay,Cleric;Druid
 Blood-stained,battle-hardened brutality,Barbarian;Fighter;Rogue
 Blooded,scarred veteran melee specialist,Barbarian;Fighter;Rogue
@@ -56,7 +55,6 @@ Auric,sun-blessed radiance and command,Cleric;Paladin;Bard
 Bramble,thorny druidic nature control,Druid;Ranger
 Chained,enslaved power barely contained,Warlock;Barbarian
 Coral,deep-sea mystic of tides and currents,Druid;Sorcerer
-Dreadmarked,bearer of an ancient curse,Warlock;Rogue;Wizard
 Echoing,illusion and sound-based trickery,Bard;Wizard
 Eclipsed,balance between light and shadow,Cleric;Warlock;Wizard
 Emberforged,born of flame and steel,Sorcerer;Fighter;Warlock
