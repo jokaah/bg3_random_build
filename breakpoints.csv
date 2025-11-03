@@ -21,11 +21,8 @@ Sword,3,Bard
 Sword,6,Bard
 Sword,6,Bard
 Sword,10,Bard
-Glamour,3,Bard
-Glamour,6,Bard
 Glamour,6,Bard
 Glamour,10,Bard
-Valour,3,Bard
 Valour,6,Bard
 Valour,10,Bard
 War,1,Cleric
@@ -43,9 +40,9 @@ Tempest,6,Cleric
 Light,5,Cleric
 Light,9,Cleric
 Death,6,Cleric
+Death,6,Cleric
 Moon,6,Druid
 Moon,10,Druid
-Moon,11,Druid
 Land,6,Druid
 Land,6,Druid
 Land,9,Druid
@@ -53,11 +50,9 @@ Spore,2,Druid
 Spore,2,Druid
 Spore,6,Druid
 Spore,6,Druid
-Spore,10,Druid
 Star,2,Druid
 Star,2,Druid
 Star,6,Druid
-Star,10,Druid
 Fighter,2,Fighter
 Fighter,2,Fighter
 Fighter,2,Fighter
@@ -72,6 +67,7 @@ Arcane Archer,7,Fighter
 Arcane Archer,11,Fighter
 Eldritch Knight,7,Fighter
 Eldritch Knight,7,Fighter
+Eldritch Knight,7,Fighter
 Eldritch Knight,11,Fighter
 Open Hand,6,Monk
 Open Hand,6,Monk
@@ -83,12 +79,9 @@ Shadow Monk,6,Monk
 Shadow Monk,11,Monk
 Four Elements,3,Monk
 Four Elements,5,Monk
-Four Elements,5,Monk
 Four Elements,6,Monk
 Drunken,6,Monk
-Drunken,6,Monk
 Drunken,9,Monk
-Paladin,2,Paladin
 Paladin,2,Paladin
 Paladin,2,Paladin
 Devotion,3,Paladin
@@ -106,16 +99,14 @@ Oathbreaker,7,Paladin
 Gloom Stalker,3,Ranger
 Gloom Stalker,5,Ranger
 Gloom Stalker,5,Ranger
-Gloom Stalker,7,Ranger
 Gloom Stalker,11,Ranger
 Hunter,5,Ranger
-Hunter,7,Ranger
+Hunter,5,Ranger
 Hunter,11,Ranger
 Hunter,11,Ranger
 Swarmkeeper,3,Ranger
 Swarmkeeper,7,Ranger
 Swarmkeeper,11,Ranger
-Beast Master,5,Ranger
 Beast Master,7,Ranger
 Beast Master,11,Ranger
 Rogue,1,Rogue
@@ -136,25 +127,22 @@ Arcane Trickster,9,Rogue
 Shadow Magic,3,Sorcerer
 Shadow Magic,6,Sorcerer
 Draconic,1,Sorcerer
-Draconic,1,Sorcerer
 Draconic,6,Sorcerer
 Draconic,6,Sorcerer
-Draconic,8,Sorcerer
 Storm,1,Sorcerer
 Storm,1,Sorcerer
 Storm,6,Sorcerer
-Wild Magic,1,Sorcerer
 Wild Magic,1,Sorcerer
 Wild Magic,3,Sorcerer
 Wild Magic,6,Sorcerer
 Wild Magic,11,Sorcerer
 Archfey,2,Warlock
-Archfey,6,Warlock
+Archfey,5,Warlock
 Fiend,2,Warlock
-Fiend,6,Warlock
 Fiend,9,Warlock
 Great Old One,2,Warlock
 Great Old One,2,Warlock
+Great Old One,5,Warlock
 Great Old One,6,Warlock
 Hexblade,1,Warlock
 Hexblade,1,Warlock
@@ -162,9 +150,11 @@ Hexblade,1,Warlock
 Hexblade,1,Warlock
 Hexblade,2,Warlock
 Hexblade,5,Warlock
+Hexblade,5,Warlock
 Hexblade,6,Warlock
 Wizard,1,Wizard
 Wizard,1,Wizard
+Abjuration,6,Wizard
 Abjuration,10,Wizard
 Bladesinging,6,Wizard
 Bladesinging,6,Wizard
@@ -175,8 +165,9 @@ Divination,6,Wizard
 Enchantment,2,Wizard
 Evocation,2,Wizard
 Evocation,10,Wizard
-Illusion,10,Wizard
+Illusion,2,Wizard
 Necromancy,2,Wizard
 Necromancy,6,Wizard
 Transmutation,6,Wizard
+
 
