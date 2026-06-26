@@ -17,9 +17,15 @@ class Defaults:
 DEFAULTS = Defaults(num_subclasses_weights={1: 0.05, 2: 0.45, 3: 0.40, 4: 0.10})
 
 MARTIAL_PARENTS = {"Barbarian", "Fighter", "Paladin", "Ranger", "Rogue", "Monk"}
-CASTER_PARENTS = {"Wizard", "Sorcerer", "Warlock", "Cleric", "Druid", "Bard"}
+CASTER_PARENTS = {"Wizard", "Sorcerer", "Warlock", "Cleric", "Druid", "Bard", "Artificer"}
 EA_PARENT_THRESHOLDS = {"Barbarian": 5, "Fighter": 5, "Paladin": 5, "Ranger": 5, "Monk": 5}
-EA_SUBCLASS_THRESHOLDS = {("Bard", "Valour"): 6, ("Bard", "Sword"): 6, ("Wizard", "Bladesinging"): 6}
+EA_SUBCLASS_THRESHOLDS = {
+    ("Bard", "Valour"): 6,
+    ("Bard", "Sword"): 6,
+    ("Wizard", "Bladesinging"): 6,
+    ("Artificer", "Armorer"): 5,
+    ("Artificer", "Battle Smith"): 5,
+}
 
 ROLE_SUFFIX_BY_PARENT = {
     "Barbarian": ["Berserker", "Bruiser", "Ravager", "Warchief"],
@@ -34,6 +40,7 @@ ROLE_SUFFIX_BY_PARENT = {
     "Sorcerer": ["Sorcerer", "War Mage", "Bloodmage", "Stormcaller"],
     "Warlock": ["Warlock", "Hexblade", "Binder", "Pactblade"],
     "Wizard": ["Wizard", "Arcanist", "Evoker", "Magister"],
+    "Artificer": ["Artificer", "Inventor", "Machinist", "Spellwright"],
 }
 
 SECONDARY_SUFFIX_BY_COMP = {
@@ -55,4 +62,5 @@ FLAVOR_MAP = {
     "Cleric": ["Prayer", "Light", "Ward", "Chalice", "Hallow"],
     "Druid": ["Circle", "Root", "Wilds", "Thorn", "Grove"],
     "Bard": ["Verse", "Muse", "Chord", "Refrain", "Ballad"],
+    "Artificer": ["Gear", "Spark", "Runeplate", "Turret", "Elixir"],
 }
