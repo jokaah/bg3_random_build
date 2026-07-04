@@ -1,91 +1,190 @@
 adjective,blurb,requirements
-Arcane,pure arcane prowess,Sorcerer;Wizard
-Blighted,rot/decay corruption gameplay,Cleric;Druid
-Blood-stained,battle-hardened brutality,Barbarian;Fighter;Rogue
-Blooded,scarred veteran melee specialist,Barbarian;Fighter;Rogue
-Cinder,smoldering aggression,Sorcerer;Warlock;Wizard
-Crimson,brutal crit-focused finisher,Barbarian;Rogue;Warlock
-Cursed,risk-reward cursed power,Sorcerer;Warlock
-Divine,classic cleric/holy caster theme,Cleric;Paladin
-Dreamtouched,illusion/psychic dreamcraft,Bard;Warlock;Wizard
-Duskwalk,twilight skirmisher,Monk;Rogue;Warlock
-Earthen,stone/nature-themed tanking,Barbarian;Druid;Fighter
-Ebon,blackened shadow magic and blades,Rogue;Warlock;Sorcerer
-Eldritch,otherworldly magic and whispers,Warlock;Fighter
-Embered,fire-themed offense and aggression,Sorcerer;Warlock;Wizard
-Feytouched,mischievous otherworldly tricks,Bard;Druid;Warlock
-Frost-kissed,icy precision,Druid;Sorcerer;Wizard
-Gilded,luxurious charismatic presence,Bard;Paladin;Warlock
-Glacial,cold-themed control and resilience,Druid;Sorcerer;Wizard
-Glyphscarred,experimental sigils and wards,Bard;Warlock;Wizard
-Golden,heroic radiant champion,Bard;Paladin;Cleric;Fighter
-Grim,necrotic/bleak battlefield presence,Cleric;Wizard
-Hallowed,holy devotion and radiant smites,Cleric;Paladin
-Haunted,ghostly curses and fear,Cleric;Warlock;Wizard
-Ironbound,unyielding defensive frontline,Barbarian;Fighter;Paladin
-Lunar,moon/shadow duality and illusion,Cleric;Druid;Wizard
-Necrotic,death-themed minions and damage,Cleric;Warlock;Wizard
-Nightborne,thrives under darkness,Monk;Rogue;Warlock;Sorcerer
-Oathsworn,honor-bound divine warrior,Paladin
-Profane,unholy devotion and dark rites,Cleric;Warlock;Wizard
-Radiant,light-themed healing and offense,Bard;Cleric;Paladin;Monk
-Redeemed,righteous rebirth from darkness,Cleric;Paladin
-Seraphic,angelic protector vibe,Cleric;Paladin
-Shadowed,stealth and ambush focus,Monk;Rogue;Warlock;Wizard
-Shadowforged,assassinous craft and weapon mastery,Rogue;Warlock;Wizard;Fighter;Ranger
-Silvered,noble monster-slayer motif,Fighter;Paladin;Ranger
-Solar,radiant-themed smites and healing,Paladin
-Soulbound,spirit and pact-bound powers,Cleric;Warlock
-Spellwoven,refined arcane control and buffs,Sorcerer;Warlock;Wizard
-Spellwrought,magic-tempered warrior,Sorcerer;Warlock;Wizard
-Steelhearted,valor-themed disciplined fighter,Fighter;Paladin
-Storm-touched,storm-kissed melee-caster,Bard;Druid;Sorcerer;Wizard
-Sunlit,bright radiant approach,Bard;Cleric;Paladin
-Tempestborn,storm-themed speed and knockbacks,Bard;Druid;Sorcerer;Wizard
-Twilight,between light and dark tactics,Cleric;Monk;Rogue;Warlock;Wizard
-Umbral,shadow-themed stealth and saboteur,Monk;Rogue;Warlock;Wizard
-Valkyric,celestial battlefield warrior,Cleric;Paladin
-Veiled,concealed agent tactics,Monk;Rogue;Warlock
-Verdant,nature/poison-themed battlefield control,Druid;Ranger
-Vigilant,watchful sentinel and defender,Cleric;Paladin;Ranger
-Whispering,subtle control and intrigue,Bard;Warlock;Wizard
-Wyrmblooded,draconic heritage and breath,Barbarian;Fighter;Sorcerer
-Amber,lightning-fast reflexes and golden energy,Bard;Fighter;Sorcerer;Monk
-Auric,sun-blessed radiance and command,Cleric;Paladin;Bard
-Bramble,thorny druidic nature control,Druid;Ranger
-Chained,enslaved power barely contained,Warlock;Barbarian
-Coral,deep-sea mystic of tides and currents,Druid;Sorcerer
-Echoing,illusion and sound-based trickery,Bard;Wizard
-Eclipsed,balance between light and shadow,Cleric;Warlock;Wizard
-Emberforged,born of flame and steel,Sorcerer;Fighter;Warlock
-Galeheart,stormbringer and master of winds,Bard;Sorcerer;Wizard
-Gravesworn,servant of death’s domain,Cleric;Warlock;Wizard;Sorcerer
-Mistborn,fog and illusion manipulation,Rogue;Wizard;Bard
-Moonlit,lunar grace and radiant deception,Cleric;Rogue;Wizard;Druid
-Phantasmal,ghostly illusion and misdirection,Bard;Warlock;Wizard
-Pyric,fire magic at any cost,Sorcerer;Warlock;Wizard
-Quicksilver,agility and relentless adaptability,Monk;Rogue;Fighter
-Rotwood,swamp and decay druidic corruption,Druid;Warlock
-Sanguine,blood-fueled vitality and rage,Barbarian;Warlock;Sorcerer
-Seaborn,tidal mastery and water blessings,Cleric;Druid;Sorcerer
-Serpentine,poison and cunning strikes,Rogue;Ranger;Druid
-Shattered,trauma-forged survivor grit,Barbarian;Fighter;Monk
-Tidebound,master of water and flow,Druid;Sorcerer;Ranger
-Trickwoven,arcane mischief and deception,Bard;Rogue;Wizard
-Vermillion,burning passion and fury,Barbarian;Bard;Sorcerer
-Warden,protector of balance and borders,Druid;Ranger;Paladin
-Wildfire,untamed flame and chaos incarnate,Druid;Sorcerer;Barbarian
-Windborne,freedom and speed personified,Monk;Ranger;Bard
-Zephyric,airy grace and movement,Monk;Ranger;Bard
-Tadpoled,mortal will twisted by an illithid tadpole,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard
-Flayer-touched,psionic mutations awaken unsettling talents,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard
-Clockwork,clockwork effiency,Sorcerer
-Clown,unhinged tactics,Warlock;Rogue;Fighter;Bard;Barbarian
-Arcane-forged,spellcraft engineered into steel,Artificer;Wizard
-Brassbound,clockwork gadgets and plated resilience,Artificer;Fighter
-Cogwrought,mechanical precision and battlefield tinkering,Artificer
-Runesmithed,enchanted equipment and crafted warding,Artificer;Wizard
-Sparkbound,unstable inventions and lightning-charged tools,Artificer;Sorcerer
-Steelweave,magic threaded through armor and weaponry,Artificer;Fighter;Wizard
-Elixirborn,alchemy-fueled support and strange mutations,Artificer
-Cannonmarked,explosive turrets and arcane artillery,Artificer
+Pyromaniacal,"Prioritize Fire damage whenever possible: spells, arrows, surfaces, explosives, torches, or burning weapons.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Frostbitten,"Prioritize Cold damage whenever possible, especially ice surfaces, chilled enemies, and wet targets.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Voltaic,"Prioritize Lightning damage whenever possible, especially against Wet enemies.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Thunderous,"Prioritize Thunder damage, knockbacks, Reverberation, and loud battlefield nonsense.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Corrosive,Prioritize Acid damage and acid surfaces whenever possible.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Venomous,"Prioritize Poison damage, toxins, coatings, poison clouds, and dirty tricks.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Radiant,Prioritize Radiant damage and light-based punishment whenever possible.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Necrotic,"Prioritize Necrotic damage, death magic, curses, spores, and life-draining effects.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Psychic,"Prioritize Psychic damage, mind effects, fear, confusion, charms, and illithid-flavored options.",Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Forceful,"Prioritize Force damage, Magic Missile-style reliability, Eldritch Blast, and forced movement.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Serrated,"Prioritize Slashing damage with swords, axes, glaives, scimitars, or any sharp solution.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Skewering,"Prioritize Piercing damage with bows, crossbows, daggers, rapiers, spears, or thrown pointy things.",Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Blunt,"Prioritize Bludgeoning damage with hammers, maces, clubs, staves, fists, or thrown furniture.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Thermal,Build around a Fire + Cold damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Overcharged,Build around a Fire + Lightning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Explosive,Build around a Fire + Thunder damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Scorched,Build around a Fire + Acid damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Noxious,Build around a Fire + Poison damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Solar,Build around a Fire + Radiant damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Hellbound,Build around a Fire + Necrotic damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Feverish,Build around a Fire + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Combustive,Build around a Fire + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Flametongued,Build around a Fire + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Cauterizing,Build around a Fire + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Meteoric,Build around a Fire + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Blizzardborn,Build around a Cold + Lightning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Hailstorming,Build around a Cold + Thunder damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Brackish,Build around a Cold + Acid damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Numbing,Build around a Cold + Poison damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Moonlit,Build around a Cold + Radiant damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Gravechilled,Build around a Cold + Necrotic damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Brainfreezing,Build around a Cold + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Crystalline,Build around a Cold + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Frostcarving,Build around a Cold + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Icicle,Build around a Cold + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Glacial,Build around a Cold + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Tempestuous,Build around a Lightning + Thunder damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Galvanic,Build around a Lightning + Acid damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Neurotoxic,Build around a Lightning + Poison damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Dazzling,Build around a Lightning + Radiant damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Defibrillating,Build around a Lightning + Necrotic damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Synaptic,Build around a Lightning + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Kinetic,Build around a Lightning + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Stormcleaving,Build around a Lightning + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Needlestorm,Build around a Lightning + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Thunderstruck,Build around a Lightning + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Rupturing,Build around a Thunder + Acid damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Coughing,Build around a Thunder + Poison damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Clarion,Build around a Thunder + Radiant damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Dirgeful,Build around a Thunder + Necrotic damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Screaming,Build around a Thunder + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Concussive,Build around a Thunder + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Rending,Build around a Thunder + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Shrieking,Build around a Thunder + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Earthshaking,Build around a Thunder + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Vile,Build around a Acid + Poison damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Sanitizing,Build around a Acid + Radiant damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Putrid,Build around a Acid + Necrotic damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Dissolving,Build around a Acid + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Pressurized,Build around a Acid + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Razorburned,Build around a Acid + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Injecting,Build around a Acid + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Pulping,Build around a Acid + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Purging,Build around a Poison + Radiant damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Rotting,Build around a Poison + Necrotic damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Delirious,Build around a Poison + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Expelling,Build around a Poison + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Envenomed,Build around a Poison + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Stinging,Build around a Poison + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Sickening,Build around a Poison + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Twilit,Build around a Radiant + Necrotic damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Revelatory,Build around a Radiant + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Stellar,Build around a Radiant + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Judging,Build around a Radiant + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Saintly,Build around a Radiant + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Smiting,Build around a Radiant + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Haunted,Build around a Necrotic + Psychic damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Gravitic,Build around a Necrotic + Force damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Executional,Build around a Necrotic + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Bloodletting,Build around a Necrotic + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Graverobbing,Build around a Necrotic + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Telekinetic,Build around a Psychic + Force damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Traumatic,Build around a Psychic + Slashing damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Migraine,Build around a Psychic + Piercing damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Brainbonking,Build around a Psychic + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Spellslicing,Build around a Force + Slashing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Ballistic,Build around a Force + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Catapulting,Build around a Force + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Gladiatorial,Build around a Slashing + Piercing damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Brutal,Build around a Slashing + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Puncturing,Build around a Piercing + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Sharpshooting,Use bows as your main weapon plan whenever possible.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Crossbowed,"Prefer hand crossbows, light crossbows, or heavy crossbows over other ranged weapons.",Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Polearmed,"Use spears, pikes, halberds, glaives, or tridents as your signature weapon type.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Hammering,"Use hammers, mauls, maces, or clubs as your main weapon plan.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Cleaving,"Use axes, greatswords, longswords, or glaives and solve problems with big slashing hits.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Fencing,"Use rapiers, shortswords, scimitars, or other finesse melee weapons whenever possible.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Twinfang,Dual wield from beginning to end whenever your build can support it.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Greatweaponed,Use two-handed melee weapons and lean into big single hits.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Axe-Crazy,"Favor handaxes, battleaxes, greataxes, or thrown axes whenever possible.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Dagger-Happy,"Use daggers as often as possible, including thrown daggers if needed.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Quarterstaffed,"Fight with staves or clubs, even on classes that normally would not.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Throwing,Throw weapons whenever possible and treat returning weapons as premium loot.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Improvised,"Kill enemies with chairs, crates, corpses, barrels, or anything else the game lets you throw.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Shielded,Use a shield whenever possible and make defense part of the character identity.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Unarmed,"Punch, kick, shove, throw, or otherwise fight with your body whenever possible.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Reachy,Use reach weapons and positioning to hit enemies before they can hit you.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Backstabbing,"Use daggers, shortswords, rapiers, or stealthy melee attacks whenever practical.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Boomeranging,"Use returning weapons, thrown weapons, and ranged repositioning tricks.",Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Bonking,Every serious problem should eventually meet blunt force trauma.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Pointy,"Favor spears, arrows, bolts, daggers, rapiers, and other piercing options.",Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Heroic,"Save as many people as the game reasonably allows, even when it is inconvenient.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Greedy,"Steal, pickpocket, extort, and loot whenever the opportunity appears.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Merciful,Spare enemies and NPCs whenever the game gives you a meaningful option.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Bloodthirsty,Kill major villains and dangerous enemies instead of sparing them.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Altruistic,Help people without demanding payment whenever possible.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Treacherous,"Betray factions, bosses, or allies whenever it creates a better opportunity.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Loyal,Keep promises and stand by companions once you have committed to them.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Diplomatic,Try dialogue before violence in every major encounter.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Intimidating,"Prefer intimidation, threats, coercion, and displays of power in dialogue.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Deceptive,"Lie, disguise, impersonate, and manipulate your way through problems.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Naturebound,"Save the Grove and protect druids, tieflings, animals, and natural places when possible.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Raiding,Side against the Grove or otherwise take the crueler Act 1 route.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Liberating,Free the Nightsong and oppose those who would imprison her.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Obedient,Do not free the Nightsong; follow the darker path in the Shadow-Cursed Lands.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Wormy,Use tadpoles freely and unlock illithid powers as they become available.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Pristine,Refuse tadpoles and avoid illithid powers entirely.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Evolved,Accept the Astral Tadpole and lean into partial-illithid power.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Resistant,"Use early tadpoles if desired, but refuse the Astral Tadpole.",Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Companionable,Recruit as many companions as possible and resolve their personal quests.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Lonely,"Minimize companion recruitment and rely on hirelings, summons, or a smaller party fantasy.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Romantic,"Prioritize companion approval, romance scenes, and emotionally loyal choices.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Curious,Explore every map thoroughly before moving to the next major act.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Frugal,"Avoid buying gear unless absolutely necessary; loot, steal, craft, or scavenge instead.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Extravagant,"Buy powerful, stylish, or weird items whenever they fit the theme.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Collector,"Hoard unique named items, quest items, books, oddities, and trophies.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Devout,"Favor gods, temples, holy symbols, blessings, and religiously sincere choices.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Profane,"Favor cursed objects, forbidden bargains, necromancy, and suspicious rituals.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Chaotic,Pick the funniest or most disruptive option whenever it does not end the run.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Lawful,"Respect contracts, bargains, oaths, guards, and formal authority whenever possible.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Rebellious,"Undermine tyrants, cults, slavers, and anyone who acts too smug.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Secretive,"Use stealth, invisibility, disguises, and surprise whenever possible.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Loud,"Avoid subtlety. Kick doors open, start fights openly, and make your entrance obvious.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Bookish,"Read books, notes, plaques, necromancy manuals, and suspicious documents before acting.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Barrelmancing,"Use barrels, surfaces, explosives, and environmental hazards as legitimate strategy.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Fashionable,"Choose equipment that looks cool, even when it is not mathematically optimal.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Cursed,"Use cursed, risky, or drawback-heavy items instead of always picking the safest option.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Mighty,Obtain Titanstring Bow and build around its Strength-scaling ranged damage.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Bullseye,Make Titanstring Bow your signature weapon and solve fights from range.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Unerring,"Build around The Dead Shot and chase accuracy, critical hits, and clean ranged kills.",Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Deadshot,"Use The Dead Shot as your endgame identity: one archer, one target, no mercy.",Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Cyclonic,Build around Nyrulna as a thrown or melee weapon and embrace thunderous chaos.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Tridented,Make Nyrulna your signature weapon and throw yourself into every fight like a storm.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Dawnlit,Build around The Blood of Lathander and carry its radiant power through the shadowed parts of the game.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Lathandrian,Use The Blood of Lathander as your signature weapon and play like the sun has legal representation.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Titanic,Build around Balduran's Giantslayer and hunt the biggest enemies on the map.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Giant-Slaying,Use Balduran's Giantslayer as your boss-killing identity and make Strength matter.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Ridiculous,Build around Clown Hammer and commit to the bit even when better weapons exist.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Clownish,Use Clown Hammer as your signature weapon and turn serious encounters into slapstick violence.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Bulwarked,Build around Defender Flail and become annoyingly difficult to remove from the frontline.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Flail-Safe,Use Defender Flail as your defensive identity and keep enemies stuck dealing with you.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Elegant,Build around Larethian's Wrath and fight like a graceful blade-dancer.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Larethian,"Use Larethian's Wrath as your signature weapon and make finesse, reach, or style matter.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Primitive,Build around Magic Club and prove that enchanted bonking is still magic.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Clubby,Use Magic Club as your signature weapon and keep the plan beautifully simple.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Harmonic,Build around Phalar Aluve and use Sing or Shriek in every major fight.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Melodic,Keep Phalar Aluve central to the party plan and make its aura matter.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Melancholic,Build around Sorrow and use Sorrowful Lash whenever it creates value.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Spiteful,Make Sorrow your signature weapon and drag enemies exactly where you want them.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Hungry,Build around Shattered Flail and keep attacking to satisfy the weapon's demands.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Flail-Happy,Use Shattered Flail as your signature weapon and turn its drawback into a personality trait.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Savage,Build around Vicious Battleaxe and lean into brutal melee pressure.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Battleaxed,Use Vicious Battleaxe as your signature weapon and make every hit feel personal.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Dwarven,Build around Dwarven Thrower and throw it whenever possible.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Returning,Make Dwarven Thrower your signature weapon and treat every enemy as target practice.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Artificer
+Watchful,"Build around Halberd of Vigilance and use reach, initiative, and control to dominate space.",Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Vigilant,Use Halberd of Vigilance as your signature weapon and punish enemies before they settle in.,Barbarian;Bard;Cleric;Druid;Fighter;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Cherished,Build around Staff of Cherished Necromancy and lean into Necromancy spells.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Necromantic,Make Staff of Cherished Necromancy your spellcasting identity and feed on death magic.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Vampiric,Build around Sword of Life Stealing and chase critical hits that keep you alive.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Life-Stealing,Use Sword of Life Stealing as your signature weapon and sustain through violence.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Graceful,"Build around The Dancing Breeze and make reach, mobility, and finesse the point.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Breezy,Use The Dancing Breeze as your signature weapon and dance around the battlefield.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Sacred,Build around The Sacred Star and stack radiant pressure wherever possible.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Starry,Use The Sacred Star as your signature weapon and make holy bonking your answer to evil.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Wizard;Artificer
+Duelist,Build around Duellist's Prerogative and fight with a single elegant weapon.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Prerogative,Use Duellist's Prerogative as your signature weapon and make one-on-one combat your fantasy.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Astral,Build around Silver Sword of the Astral Plane and embrace a githyanki or astral-warrior identity.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
+Silvered,Use Silver Sword of the Astral Plane as your signature weapon and make psychic-edged melee your thing.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
