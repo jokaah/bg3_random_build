@@ -1,10 +1,15 @@
 import random
-from typing import List, Dict, Tuple, Optional, Set
+from typing import Dict, List, Optional, Set, Tuple
 
 from .config import (
-    DEFAULTS, MARTIAL_PARENTS, CASTER_PARENTS,
-    EA_PARENT_THRESHOLDS, EA_SUBCLASS_THRESHOLDS,
-    ROLE_SUFFIX_BY_PARENT, SECONDARY_SUFFIX_BY_COMP, FLAVOR_MAP
+    CASTER_PARENTS,
+    DEFAULTS,
+    EA_PARENT_THRESHOLDS,
+    EA_SUBCLASS_THRESHOLDS,
+    FLAVOR_MAP,
+    MARTIAL_PARENTS,
+    ROLE_SUFFIX_BY_PARENT,
+    SECONDARY_SUFFIX_BY_COMP,
 )
 from .models import SubBreakpoint
 
@@ -29,14 +34,15 @@ def index_structures(sub_bps: List[SubBreakpoint]):
 def choose_k_parents(k: int, parents: List[str]) -> List[str]:
     if k > len(parents):
         return []
-
     return random.sample(parents, k)
 
 
-def try_find_combo_for_subclasses(cap: int,
-                                  chosen_subclasses: List[str],
-                                  options_by_subclass: Dict[str, List[SubBreakpoint]],
-                                  max_random_tries: int = 8000) -> Optional[List[SubBreakpoint]]:
+def try_find_combo_for_subclasses(
+    cap: int,
+    chosen_subclasses: List[str],
+    options_by_subclass: Dict[str, List[SubBreakpoint]],
+    max_random_tries: int = 8000,
+) -> Optional[List[SubBreakpoint]]:
     if not chosen_subclasses:
         return None
 
@@ -78,7 +84,11 @@ def _has_extra_attack(finals: Dict[Tuple[str, str], int], picks: List[SubBreakpo
     return False
 
 
-def fill_to_cap_with_preferences(picks: List[SubBreakpoint], cap: int, want_ea: bool) -> Dict[Tuple[str, str], int]:
+def fill_to_cap_with_preferences(
+    picks: List[SubBreakpoint],
+    cap: int,
+    want_ea: bool,
+) -> Dict[Tuple[str, str], int]:
     finals: Dict[Tuple[str, str], int] = {}
 
     for bp in picks:
@@ -143,38 +153,54 @@ def _parents_in_build(final_levels: Dict[Tuple[str, str], int]) -> Set[str]:
     for (_, parent), lvl in final_levels.items():
         if lvl > 0:
             parents.add(parent)
-
     return parents
 
 
-def adjective_fits(adjective: str, final_levels: Dict[Tuple[str, str], int], theme_requirements: Dict[str, Set[str]]) -> bool:
+def adjective_fits(
+    adjective: str,
+    final_levels: Dict[Tuple[str, str], int],
+    theme_requirements: Dict[str, Set[str]],
+) -> bool:
     req = theme_requirements.get(adjective)
     if not req:
         return True
-
     return len(req & _parents_in_build(final_levels)) > 0
 
 
-def pick_adjective_for(final_levels: Dict[Tuple[str, str], int], themes: Dict[str, str], theme_requirements: Dict[str, Set[str]]) -> str:
+def pick_adjective_for(
+    final_levels: Dict[Tuple[str, str], int],
+    themes: Dict[str, str],
+    theme_requirements: Dict[str, Set[str]],
+) -> str:
     fitting = [a for a in themes.keys() if adjective_fits(a, final_levels, theme_requirements)]
     if fitting:
         return random.choice(fitting)
     return random.choice(list(themes.keys()))
 
 
-def _dominant_parent(final_levels: Dict[Tuple[str, str], int]) -> str:
+def _levels_by_parent(final_levels: Dict[Tuple[str, str], int]) -> Dict[str, int]:
     by_parent: Dict[str, int] = {}
-    for (sub, parent), lvl in final_levels.items():
+    for (_, parent), lvl in final_levels.items():
         by_parent[parent] = by_parent.get(parent, 0) + lvl
+    return by_parent
 
+
+def _dominant_parent(final_levels: Dict[Tuple[str, str], int]) -> str:
+    by_parent = _levels_by_parent(final_levels)
     return max(by_parent.items(), key=lambda kv: kv[1])[0]
+
+
+def _top_name_parents(final_levels: Dict[Tuple[str, str], int], limit: int = 2) -> List[str]:
+    """Return the parent classes allowed to contribute flavor words to a build name."""
+    by_parent = _levels_by_parent(final_levels)
+    ranked = sorted(by_parent.items(), key=lambda kv: (-kv[1], kv[0]))
+    return [parent for parent, _ in ranked[:limit]]
 
 
 def _composition_role(final_levels: Dict[Tuple[str, str], int]) -> str:
     m = c = 0
-    by_parent: Dict[str, int] = {}
-    for (sub, parent), lvl in final_levels.items():
-        by_parent[parent] = by_parent.get(parent, 0) + lvl
+    by_parent = _levels_by_parent(final_levels)
+
     for parent, total in by_parent.items():
         if parent in MARTIAL_PARENTS:
             m += total
@@ -183,32 +209,29 @@ def _composition_role(final_levels: Dict[Tuple[str, str], int]) -> str:
 
     if m > 0 and c > 0:
         return "hybrid"
-
     return "martial" if m >= c else "caster"
 
 
 def _pick_role_suffix(dominant_parent: str, comp: str) -> str:
     if dominant_parent in ROLE_SUFFIX_BY_PARENT:
         return random.choice(ROLE_SUFFIX_BY_PARENT[dominant_parent])
-
     if comp == "hybrid":
         return random.choice(SECONDARY_SUFFIX_BY_COMP["hybrid"])
-
     if comp == "martial":
         return random.choice(["Fighter", "Vanguard", "Skirmisher"])
-
     return random.choice(["Caster", "Invoker", "Arcanist"])
 
 
-def build_name_and_blurb(picks: List[SubBreakpoint],
-                         final_levels: Dict[Tuple[str, str], int],
-                         themes: Dict[str, str],
-                         theme_requirements: Dict[str, set],
-                         name_max_hooks: int,
-                         use_adjective: bool) -> Tuple[str, str]:
+def build_name_and_blurb(
+    picks: List[SubBreakpoint],
+    final_levels: Dict[Tuple[str, str], int],
+    themes: Dict[str, str],
+    theme_requirements: Dict[str, set],
+    name_max_hooks: int,
+    use_adjective: bool,
+) -> Tuple[str, str]:
     comp = _composition_role(final_levels)
     dom = _dominant_parent(final_levels)
-
     adjective = pick_adjective_for(final_levels, themes, theme_requirements)
     blurb = themes.get(adjective, "themed build")
 
@@ -221,10 +244,11 @@ def build_name_and_blurb(picks: List[SubBreakpoint],
 
     hooks = []
     if name_max_hooks > 0:
-        parents = [bp.parent_class for bp in picks]
-        for p in parents:
-            if p in FLAVOR_MAP and FLAVOR_MAP[p]:
-                hooks.append(random.choice(FLAVOR_MAP[p]))
+        # Avoid the old word-salad effect: only the top two parent classes by final
+        # level investment are allowed to contribute flavor hooks to the name.
+        for parent in _top_name_parents(final_levels, limit=2):
+            if parent in FLAVOR_MAP and FLAVOR_MAP[parent]:
+                hooks.append(random.choice(FLAVOR_MAP[parent]))
         random.shuffle(hooks)
         hooks = hooks[:name_max_hooks]
 
@@ -239,28 +263,36 @@ def build_name_and_blurb(picks: List[SubBreakpoint],
     return " ".join(parts), blurb
 
 
-def format_build(picks: List[SubBreakpoint], final_levels: Dict[Tuple[str, str], int], blurb: str, show_parent_in_label: bool,
-                 include_blurb: bool = True) -> str:
+def format_build(
+    picks: List[SubBreakpoint],
+    final_levels: Dict[Tuple[str, str], int],
+    blurb: str,
+    show_parent_in_label: bool,
+    include_blurb: bool = True,
+) -> str:
     parts = []
     for bp in picks:
         key = (bp.subclass, bp.parent_class)
         parts.append(bp.label(final_levels[key], show_parent=show_parent_in_label))
-    core = ' / '.join(sorted(parts))
+
+    core = " / ".join(sorted(parts))
     return f"{core} ({blurb})" if include_blurb and blurb else core
 
 
-def suggest_build(sub_bps: List[SubBreakpoint],
-                  themes: Dict[str, str],
-                  theme_requirements: Dict[str, set],
-                  level_cap: int = DEFAULTS.level_cap,
-                  num_subclass_weights: Dict[int, float] = None,
-                  max_global_attempts: int = 800,
-                  show_parent_in_label: bool = DEFAULTS.show_parent_in_label,
-                  require_ea_if_martial: bool = DEFAULTS.require_ea_if_martial,
-                  prefer_ea_if_hybrid: float = DEFAULTS.prefer_ea_if_hybrid,
-                  name_max_hooks: int = DEFAULTS.name_max_hooks,
-                  use_adjective: bool = DEFAULTS.use_adjective,
-                  include_blurb: bool = True) -> Tuple[str, str]:
+def suggest_build(
+    sub_bps: List[SubBreakpoint],
+    themes: Dict[str, str],
+    theme_requirements: Dict[str, set],
+    level_cap: int = DEFAULTS.level_cap,
+    num_subclass_weights: Dict[int, float] = None,
+    max_global_attempts: int = 800,
+    show_parent_in_label: bool = DEFAULTS.show_parent_in_label,
+    require_ea_if_martial: bool = DEFAULTS.require_ea_if_martial,
+    prefer_ea_if_hybrid: float = DEFAULTS.prefer_ea_if_hybrid,
+    name_max_hooks: int = DEFAULTS.name_max_hooks,
+    use_adjective: bool = DEFAULTS.use_adjective,
+    include_blurb: bool = True,
+) -> Tuple[str, str]:
     if num_subclass_weights is None:
         num_subclass_weights = DEFAULTS.num_subclasses_weights
 
@@ -273,6 +305,7 @@ def suggest_build(sub_bps: List[SubBreakpoint],
         k = weighted_choice(num_subclass_weights)
         if k > len(available_parents):
             continue
+
         parents = choose_k_parents(k, available_parents)
         if not parents:
             continue
@@ -285,21 +318,41 @@ def suggest_build(sub_bps: List[SubBreakpoint],
 
             prelim = fill_to_cap_with_preferences(picks, level_cap, want_ea=False)
             comp = _composition_role(prelim)
-            want_ea = (comp == "martial" and require_ea_if_martial) or (comp == "hybrid" and random.random() < prefer_ea_if_hybrid)
-
+            want_ea = (comp == "martial" and require_ea_if_martial) or (
+                comp == "hybrid" and random.random() < prefer_ea_if_hybrid
+            )
             finals = fill_to_cap_with_preferences(picks, level_cap, want_ea=want_ea)
+
             if want_ea and not _has_extra_attack(finals, picks):
                 continue
 
-            name, blurb = build_name_and_blurb(picks, finals, themes, theme_requirements, name_max_hooks, use_adjective)
-            line = format_build(picks, finals, blurb, show_parent_in_label, include_blurb=include_blurb)
+            name, blurb = build_name_and_blurb(
+                picks,
+                finals,
+                themes,
+                theme_requirements,
+                name_max_hooks,
+                use_adjective,
+            )
+            line = format_build(
+                picks,
+                finals,
+                blurb,
+                show_parent_in_label,
+                include_blurb=include_blurb,
+            )
             return name, line
 
     raise RuntimeError("No valid combination found.")
 
 
-def suggest_many(sub_bps: List[SubBreakpoint], themes: Dict[str, str], theme_requirements: Dict[str, set], n: int = 4, **kwargs) -> List[
-    Tuple[str, str]]:
+def suggest_many(
+    sub_bps: List[SubBreakpoint],
+    themes: Dict[str, str],
+    theme_requirements: Dict[str, set],
+    n: int = 4,
+    **kwargs,
+) -> List[Tuple[str, str]]:
     out = []
     for _ in range(n):
         name, line = suggest_build(sub_bps, themes, theme_requirements, **kwargs)
