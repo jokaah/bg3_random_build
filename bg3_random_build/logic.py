@@ -164,7 +164,7 @@ def adjective_fits(
     req = theme_requirements.get(adjective)
     if not req:
         return True
-    return len(req & _parents_in_build(final_levels)) > 0
+    return _dominant_parent(final_levels) in req
 
 
 def pick_adjective_for(
