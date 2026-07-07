@@ -14,6 +14,13 @@ from .config import (
 from .models import SubBreakpoint
 
 
+COMPOSITION_WEIGHT_DEFAULTS = getattr(
+    DEFAULTS,
+    "composition_weights",
+    None,
+) or {"martial": 0.25, "caster": 0.35, "hybrid": 0.40}
+
+
 def weighted_choice(weight_map: Dict[int, float]) -> int:
     vals, wts = zip(*weight_map.items())
     return random.choices(vals, weights=wts, k=1)[0]
@@ -319,7 +326,7 @@ def suggest_build(
     if num_subclass_weights is None:
         num_subclass_weights = DEFAULTS.num_subclasses_weights
     if composition_weights is None:
-        composition_weights = DEFAULTS.composition_weights
+        composition_weights = COMPOSITION_WEIGHT_DEFAULTS
 
     options_by_subclass, subclasses_by_parent = index_structures(sub_bps)
     available_parents = list(subclasses_by_parent.keys())
