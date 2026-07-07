@@ -7,13 +7,6 @@ from bg3_random_build.data_io import load_breakpoints, load_themes
 from bg3_random_build.logic import suggest_many
 
 
-COMPOSITION_WEIGHT_DEFAULTS = getattr(
-    DEFAULTS,
-    "composition_weights",
-    None,
-) or {"martial": 0.25, "caster": 0.35, "hybrid": 0.40}
-
-
 HERE = pathlib.Path(__file__).resolve().parent
 DEFAULT_BREAKPOINTS = HERE / DEFAULTS.breakpoints_path
 DEFAULT_THEMES = HERE / DEFAULTS.themes_path
@@ -37,19 +30,19 @@ with st.expander("Advanced composition weights"):
     martial_weight = st.number_input(
         "Martial-only weight",
         min_value=0.0,
-        value=float(COMPOSITION_WEIGHT_DEFAULTS["martial"]),
+        value=float(DEFAULTS.composition_weights["martial"]),
         step=0.05,
     )
     caster_weight = st.number_input(
         "Caster-only weight",
         min_value=0.0,
-        value=float(COMPOSITION_WEIGHT_DEFAULTS["caster"]),
+        value=float(DEFAULTS.composition_weights["caster"]),
         step=0.05,
     )
     hybrid_weight = st.number_input(
         "Hybrid weight",
         min_value=0.0,
-        value=float(COMPOSITION_WEIGHT_DEFAULTS["hybrid"]),
+        value=float(DEFAULTS.composition_weights["hybrid"]),
         step=0.05,
     )
 

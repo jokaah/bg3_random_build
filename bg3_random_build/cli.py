@@ -7,13 +7,6 @@ from .data_io import load_breakpoints, load_themes
 from .logic import suggest_many
 
 
-COMPOSITION_WEIGHT_DEFAULTS = getattr(
-    DEFAULTS,
-    "composition_weights",
-    None,
-) or {"martial": 0.25, "caster": 0.35, "hybrid": 0.40}
-
-
 def _composition_weights_from_args(args) -> dict:
     return {
         "martial": args.martial_weight,
@@ -34,9 +27,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--show-parent-in-label", action="store_true", help="Show parent class in label.")
     p.add_argument("--no-ea-if-martial", dest="ea_if_martial", action="store_false", help="Do not require Extra Attack for pure martial comps.")
     p.add_argument("--prefer-ea-if-hybrid", type=float, default=DEFAULTS.prefer_ea_if_hybrid, help="Probability to prefer EA for hybrid comps (0-1).")
-    p.add_argument("--martial-weight", type=float, default=COMPOSITION_WEIGHT_DEFAULTS["martial"], help="Weight for martial-only parent selection.")
-    p.add_argument("--caster-weight", type=float, default=COMPOSITION_WEIGHT_DEFAULTS["caster"], help="Weight for caster-only parent selection.")
-    p.add_argument("--hybrid-weight", type=float, default=COMPOSITION_WEIGHT_DEFAULTS["hybrid"], help="Weight for mixed martial/caster parent selection.")
+    p.add_argument("--martial-weight", type=float, default=DEFAULTS.composition_weights["martial"], help="Weight for martial-only parent selection.")
+    p.add_argument("--caster-weight", type=float, default=DEFAULTS.composition_weights["caster"], help="Weight for caster-only parent selection.")
+    p.add_argument("--hybrid-weight", type=float, default=DEFAULTS.composition_weights["hybrid"], help="Weight for mixed martial/caster parent selection.")
     p.add_argument("--no-theme", action="store_true", help="Disable adjective in names and omit themed blurb.")
     p.add_argument("--seed", type=int, default=None, help="Random seed for reproducibility.")
     return p
