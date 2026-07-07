@@ -7,10 +7,18 @@ from .data_io import load_breakpoints, load_themes
 from .logic import suggest_many
 
 
+def _composition_weights_from_args(args) -> dict:
+    return {
+        "martial": args.martial_weight,
+        "caster": args.caster_weight,
+        "hybrid": args.hybrid_weight,
+    }
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="bg3-builds",
-        description="Generate themed BG3 multiclass builds from breakpoint CSVs."
+        description="Generate themed BG3 multiclass builds from breakpoint CSVs.",
     )
     p.add_argument("-n", "--num", type=int, default=4, help="How many builds to generate.")
     p.add_argument("--breakpoints", default=DEFAULTS.breakpoints_path, help="Path to breakpoints CSV.")
@@ -19,6 +27,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--show-parent-in-label", action="store_true", help="Show parent class in label.")
     p.add_argument("--no-ea-if-martial", dest="ea_if_martial", action="store_false", help="Do not require Extra Attack for pure martial comps.")
     p.add_argument("--prefer-ea-if-hybrid", type=float, default=DEFAULTS.prefer_ea_if_hybrid, help="Probability to prefer EA for hybrid comps (0-1).")
+    p.add_argument("--martial-weight", type=float, default=DEFAULTS.composition_weights["martial"], help="Weight for martial-only parent selection.")
+    p.add_argument("--caster-weight", type=float, default=DEFAULTS.composition_weights["caster"], help="Weight for caster-only parent selection.")
+    p.add_argument("--hybrid-weight", type=float, default=DEFAULTS.composition_weights["hybrid"], help="Weight for mixed martial/caster parent selection.")
     p.add_argument("--no-theme", action="store_true", help="Disable adjective in names and omit themed blurb.")
     p.add_argument("--seed", type=int, default=None, help="Random seed for reproducibility.")
     return p
@@ -27,7 +38,6 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv=None) -> int:
     argv = argv if argv is not None else sys.argv[1:]
     args = build_parser().parse_args(argv)
-
     if args.seed is not None:
         random.seed(args.seed)
 
@@ -52,13 +62,13 @@ def main(argv=None) -> int:
         show_parent_in_label=args.show_parent_in_label,
         require_ea_if_martial=args.ea_if_martial,
         prefer_ea_if_hybrid=args.prefer_ea_if_hybrid,
+        composition_weights=_composition_weights_from_args(args),
         use_adjective=not args.no_theme,
         include_blurb=not args.no_theme,
     )
 
     for name, line in builds:
         print(name, line)
-
     return 0
 
 

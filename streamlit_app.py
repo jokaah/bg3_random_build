@@ -12,15 +12,45 @@ DEFAULT_BREAKPOINTS = HERE / DEFAULTS.breakpoints_path
 DEFAULT_THEMES = HERE / DEFAULTS.themes_path
 
 st.set_page_config(page_title="BG3 Random Build Generator", page_icon="", layout="centered")
-st.title("BG3 Random Build Generator")
-st.caption("Generate random, probably silly, BG3 build suggestions. See it as a challenge ;)")
+st.title(" BG3 Random Build Generator")
+st.caption("Generate random, probably silly, BG3 build suggestions.\nSee it as a challenge ;)")
 
 n = st.number_input("Number of builds", min_value=1, max_value=20, value=4, step=1)
 include_theme = st.checkbox(
-    'Include build "theme" (might be silly)',
+    "Include build \"theme\" (might be silly)",
     value=True,
     help="When off, only suggest class levels and simple names.",
 )
+
+with st.expander("Advanced composition weights"):
+    st.caption(
+        "These weights decide whether the chosen parent classes should be martial-only, "
+        "caster-only, or a true martial/caster hybrid. They do not need to add up to 1."
+    )
+    martial_weight = st.number_input(
+        "Martial-only weight",
+        min_value=0.0,
+        value=float(DEFAULTS.composition_weights["martial"]),
+        step=0.05,
+    )
+    caster_weight = st.number_input(
+        "Caster-only weight",
+        min_value=0.0,
+        value=float(DEFAULTS.composition_weights["caster"]),
+        step=0.05,
+    )
+    hybrid_weight = st.number_input(
+        "Hybrid weight",
+        min_value=0.0,
+        value=float(DEFAULTS.composition_weights["hybrid"]),
+        step=0.05,
+    )
+
+composition_weights = {
+    "martial": martial_weight,
+    "caster": caster_weight,
+    "hybrid": hybrid_weight,
+}
 
 err = None
 try:
@@ -37,45 +67,20 @@ if err:
     st.error(err)
     st.stop()
 
-subclasses_by_parent = {}
-for bp in sub_bps:
-    subclasses_by_parent.setdefault(bp.parent_class, set()).add(bp.subclass)
-
-with st.expander("Subclass pool", expanded=False):
-    st.caption("Choose which subclasses are allowed to appear. Default is all.")
-
-    selected_subclasses = set()
-    for parent in sorted(subclasses_by_parent):
-        options = sorted(subclasses_by_parent[parent])
-        selected = st.multiselect(
-            parent,
-            options=options,
-            default=options,
-            key=f"subclass_pool_{parent}",
-        )
-        selected_subclasses.update(selected)
-
-filtered_sub_bps = [bp for bp in sub_bps if bp.subclass in selected_subclasses]
-
-if not filtered_sub_bps:
-    st.warning("Pick at least one subclass to generate builds.")
+if sum(composition_weights.values()) <= 0:
+    st.error("At least one composition weight must be greater than zero.")
     st.stop()
 
 if st.button("Generate"):
-    try:
-        builds = suggest_many(
-            filtered_sub_bps,
-            themes,
-            theme_reqs,
-            n=int(n),
-            use_adjective=include_theme,
-            include_blurb=include_theme,
-        )
-    except RuntimeError as e:
-        st.error(f"Could not generate a valid build from the selected subclass pool: {e}")
-        st.stop()
-
-    for name, line in builds:
+    for name, line in suggest_many(
+        sub_bps,
+        themes,
+        theme_reqs,
+        n=int(n),
+        composition_weights=composition_weights,
+        use_adjective=include_theme,
+        include_blurb=include_theme,
+    ):
         with st.container(border=True):
             st.markdown(f"### {name}")
             st.write(line)

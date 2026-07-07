@@ -5,6 +5,7 @@ from dataclasses import dataclass
 class Defaults:
     level_cap: int = 12
     num_subclasses_weights: dict = None
+    composition_weights: dict = None
     show_parent_in_label: bool = False
     require_ea_if_martial: bool = True
     prefer_ea_if_hybrid: float = 0.7
@@ -14,7 +15,10 @@ class Defaults:
     use_adjective: bool = True
 
 
-DEFAULTS = Defaults(num_subclasses_weights={1: 0.05, 2: 0.45, 3: 0.40, 4: 0.10})
+DEFAULTS = Defaults(
+    num_subclasses_weights={1: 0.05, 2: 0.45, 3: 0.40, 4: 0.10},
+    composition_weights={"martial": 0.25, "caster": 0.35, "hybrid": 0.40},
+)
 
 MARTIAL_PARENTS = {"Barbarian", "Fighter", "Paladin", "Ranger", "Rogue", "Monk"}
 CASTER_PARENTS = {"Wizard", "Sorcerer", "Warlock", "Cleric", "Druid", "Bard", "Artificer"}
@@ -26,7 +30,6 @@ EA_PARENT_THRESHOLDS = {
     "Ranger": 5,
     "Monk": 5,
 }
-
 EA_SUBCLASS_THRESHOLDS = {
     ("Bard", "Valour"): 6,
     ("Bard", "Sword"): 6,
@@ -50,13 +53,11 @@ ROLE_SUFFIX_BY_PARENT = {
     "Wizard": ["Magister", "Arcanist", "Spellwright", "Runesage", "Evoker", "Savant"],
     "Artificer": ["Inventor", "Machinist", "Spellsmith", "Tinkerer", "Arcanotech", "Engineer"],
 }
-
 SECONDARY_SUFFIX_BY_COMP = {
     "martial": ["Slayer", "Vanguard", "Skirmisher", "Marauder", "Sentinel", "Duelist"],
     "caster": ["Invoker", "Spellweaver", "Arcanist", "Mystic", "Savant", "Channeler"],
     "hybrid": ["Spellblade", "Battlemage", "Magus", "Wardancer", "Hexblade", "Spellbreaker"],
 }
-
 FLAVOR_MAP = {
     "Barbarian": ["Rage", "Fury", "Howl", "Blood", "Fang", "Storm"],
     "Bard": ["Verse", "Chord", "Muse", "Encore", "Ballad", "Lute"],

@@ -19,15 +19,18 @@ def weighted_choice(weight_map: Dict[int, float]) -> int:
     return random.choices(vals, weights=wts, k=1)[0]
 
 
+def weighted_choice_str(weight_map: Dict[str, float]) -> str:
+    vals, wts = zip(*weight_map.items())
+    return random.choices(vals, weights=wts, k=1)[0]
+
+
 def index_structures(sub_bps: List[SubBreakpoint]):
     options_by_subclass: Dict[str, List[SubBreakpoint]] = {}
     subclasses_by_parent: Dict[str, List[str]] = {}
-
     for bp in sub_bps:
         options_by_subclass.setdefault(bp.subclass, []).append(bp)
         if bp.subclass not in subclasses_by_parent.setdefault(bp.parent_class, []):
             subclasses_by_parent[bp.parent_class].append(bp.subclass)
-
     return options_by_subclass, subclasses_by_parent
 
 
@@ -35,6 +38,37 @@ def choose_k_parents(k: int, parents: List[str]) -> List[str]:
     if k > len(parents):
         return []
     return random.sample(parents, k)
+
+
+def choose_parents_for_composition(k: int, available_parents: List[str], comp_target: str) -> List[str]:
+    """Choose parent classes for the requested broad composition.
+
+    martial: only martial parents
+    caster: only caster parents
+    hybrid: at least one martial and one caster parent
+    """
+    martial = [p for p in available_parents if p in MARTIAL_PARENTS]
+    caster = [p for p in available_parents if p in CASTER_PARENTS]
+
+    if comp_target == "martial":
+        return choose_k_parents(k, martial)
+
+    if comp_target == "caster":
+        return choose_k_parents(k, caster)
+
+    if comp_target == "hybrid":
+        if k < 2 or not martial or not caster:
+            return []
+        parents = [random.choice(martial), random.choice(caster)]
+        remaining_pool = [p for p in available_parents if p not in parents]
+        extra = choose_k_parents(k - 2, remaining_pool)
+        if len(extra) != k - 2:
+            return []
+        parents.extend(extra)
+        random.shuffle(parents)
+        return parents
+
+    return choose_k_parents(k, available_parents)
 
 
 def try_find_combo_for_subclasses(
@@ -45,16 +79,13 @@ def try_find_combo_for_subclasses(
 ) -> Optional[List[SubBreakpoint]]:
     if not chosen_subclasses:
         return None
-
     min_sum = sum(min(bp.levels for bp in options_by_subclass[s]) for s in chosen_subclasses)
     if min_sum > cap:
         return None
-
     for _ in range(max_random_tries):
         pick: List[SubBreakpoint] = []
         total = 0
         feasible = True
-
         for sc in chosen_subclasses:
             bp = random.choice(options_by_subclass[sc])
             pick.append(bp)
@@ -62,10 +93,8 @@ def try_find_combo_for_subclasses(
             if total > cap:
                 feasible = False
                 break
-
         if feasible:
             return pick
-
     return None
 
 
@@ -90,7 +119,6 @@ def fill_to_cap_with_preferences(
     want_ea: bool,
 ) -> Dict[Tuple[str, str], int]:
     finals: Dict[Tuple[str, str], int] = {}
-
     for bp in picks:
         finals[(bp.subclass, bp.parent_class)] = finals.get((bp.subclass, bp.parent_class), 0) + bp.levels
 
@@ -114,7 +142,6 @@ def fill_to_cap_with_preferences(
             need = th - cur
             if need > 0:
                 candidates.append((need, key, th))
-
         if candidates:
             candidates.sort(key=lambda x: x[0])
             need, key, _ = candidates[0]
@@ -200,13 +227,11 @@ def _top_name_parents(final_levels: Dict[Tuple[str, str], int], limit: int = 2) 
 def _composition_role(final_levels: Dict[Tuple[str, str], int]) -> str:
     m = c = 0
     by_parent = _levels_by_parent(final_levels)
-
     for parent, total in by_parent.items():
         if parent in MARTIAL_PARENTS:
             m += total
         if parent in CASTER_PARENTS:
             c += total
-
     if m > 0 and c > 0:
         return "hybrid"
     return "martial" if m >= c else "caster"
@@ -234,7 +259,6 @@ def build_name_and_blurb(
     dom = _dominant_parent(final_levels)
     adjective = pick_adjective_for(final_levels, themes, theme_requirements)
     blurb = themes.get(adjective, "themed build")
-
     role1 = _pick_role_suffix(dom, comp)
     role2 = None
     if comp in SECONDARY_SUFFIX_BY_COMP and random.random() < 0.45:
@@ -259,7 +283,6 @@ def build_name_and_blurb(
     parts.append(role1)
     if role2:
         parts.append(role2)
-
     return " ".join(parts), blurb
 
 
@@ -274,7 +297,6 @@ def format_build(
     for bp in picks:
         key = (bp.subclass, bp.parent_class)
         parts.append(bp.label(final_levels[key], show_parent=show_parent_in_label))
-
     core = " / ".join(sorted(parts))
     return f"{core} ({blurb})" if include_blurb and blurb else core
 
@@ -285,6 +307,7 @@ def suggest_build(
     theme_requirements: Dict[str, set],
     level_cap: int = DEFAULTS.level_cap,
     num_subclass_weights: Dict[int, float] = None,
+    composition_weights: Dict[str, float] = None,
     max_global_attempts: int = 800,
     show_parent_in_label: bool = DEFAULTS.show_parent_in_label,
     require_ea_if_martial: bool = DEFAULTS.require_ea_if_martial,
@@ -295,6 +318,8 @@ def suggest_build(
 ) -> Tuple[str, str]:
     if num_subclass_weights is None:
         num_subclass_weights = DEFAULTS.num_subclasses_weights
+    if composition_weights is None:
+        composition_weights = DEFAULTS.composition_weights
 
     options_by_subclass, subclasses_by_parent = index_structures(sub_bps)
     available_parents = list(subclasses_by_parent.keys())
@@ -306,7 +331,8 @@ def suggest_build(
         if k > len(available_parents):
             continue
 
-        parents = choose_k_parents(k, available_parents)
+        comp_target = weighted_choice_str(composition_weights)
+        parents = choose_parents_for_composition(k, available_parents, comp_target)
         if not parents:
             continue
 
@@ -322,7 +348,6 @@ def suggest_build(
                 comp == "hybrid" and random.random() < prefer_ea_if_hybrid
             )
             finals = fill_to_cap_with_preferences(picks, level_cap, want_ea=want_ea)
-
             if want_ea and not _has_extra_attack(finals, picks):
                 continue
 
