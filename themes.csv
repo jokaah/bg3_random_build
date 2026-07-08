@@ -96,7 +96,6 @@ Romantic,"Prioritize companion approval, romance scenes, and emotionally loyal c
 Curious,Explore every map thoroughly before moving to the next major act.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Frugal,"Avoid buying gear unless absolutely necessary; loot, steal, craft, or scavenge instead.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Extravagant,"Buy powerful, stylish, or weird items whenever they fit the theme.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
-Collector,"Hoard unique named items, quest items, books, oddities, and trophies.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Devout,"Favor gods, temples, holy symbols, blessings, and religiously sincere choices.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Profane,"Favor cursed objects, forbidden bargains, necromancy, and suspicious rituals.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Chaotic,Pick the funniest or most disruptive option whenever it does not end the run.,Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
@@ -104,7 +103,6 @@ Lawful,"Respect contracts, bargains, oaths, guards, and formal authority wheneve
 Rebellious,"Undermine tyrants, cults, slavers, and anyone who acts too smug.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Secretive,"Use stealth, invisibility, disguises, and surprise whenever possible.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Loud,"Avoid subtlety. Kick doors open, start fights openly, and make your entrance obvious.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
-Bookish,"Read books, notes, plaques, necromancy manuals, and suspicious documents before acting.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Barrelmancing,"Use barrels, surfaces, explosives, and environmental hazards as legitimate strategy.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Fashionable,"Choose equipment that looks cool, even when it is not mathematically optimal.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Cursed,"Use cursed, risky, or drawback-heavy items instead of always picking the safest option.",Barbarian;Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
@@ -151,3 +149,4 @@ Prerogative,Use Duellist's Prerogative as your signature weapon and make one-on-
 Astral,Build around Silver Sword of the Astral Plane and embrace a githyanki or astral-warrior identity.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Silvered,Use Silver Sword of the Astral Plane as your signature weapon and make psychic-edged melee your thing.,Bard;Cleric;Druid;Fighter;Monk;Paladin;Ranger;Rogue;Sorcerer;Warlock;Wizard;Artificer
 Isekaid,"You were just an ordinary person until you suddenly found yourself stranded in Faerûn. Limit meta gaming whenever possible, and only replace one equipment slot after each boss kill.","Barbarian;Bard;Fighter;Monk;Ranger;Rogue;Wizard;Artificer"
+Healer,"Be a healer for your party.",Bard;Druid;Artificer;Cleric;Paladin
