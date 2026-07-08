@@ -193,20 +193,20 @@ def _parents_in_build(final_levels: Dict[Tuple[str, str], int]) -> Set[str]:
 def adjective_fits(
     adjective: str,
     final_levels: Dict[Tuple[str, str], int],
-    theme_requirements: Dict[str, Set[str]],
+    theme_excludes: Dict[str, Set[str]],
 ) -> bool:
-    req = theme_requirements.get(adjective)
-    if not req:
+    excluded = theme_excludes.get(adjective)
+    if not excluded:
         return True
-    return _dominant_parent(final_levels) in req
+    return _dominant_subclass(final_levels) not in excluded
 
 
 def pick_adjective_for(
     final_levels: Dict[Tuple[str, str], int],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, Set[str]],
+    theme_excludes: Dict[str, Set[str]],
 ) -> str:
-    fitting = [a for a in themes.keys() if adjective_fits(a, final_levels, theme_requirements)]
+    fitting = [a for a in themes.keys() if adjective_fits(a, final_levels, theme_excludes)]
     if fitting:
         return random.choice(fitting)
     return random.choice(list(themes.keys()))
@@ -223,6 +223,13 @@ def _dominant_parent(final_levels: Dict[Tuple[str, str], int]) -> str:
     by_parent = _levels_by_parent(final_levels)
     return max(by_parent.items(), key=lambda kv: kv[1])[0]
 
+
+
+def _dominant_subclass(final_levels: Dict[Tuple[str, str], int]) -> str:
+    subclass_totals: Dict[str, int] = {}
+    for (subclass, _), lvl in final_levels.items():
+        subclass_totals[subclass] = subclass_totals.get(subclass, 0) + lvl
+    return max(subclass_totals.items(), key=lambda kv: kv[1])[0]
 
 def _top_name_parents(final_levels: Dict[Tuple[str, str], int], limit: int = 2) -> List[str]:
     """Return the parent classes allowed to contribute flavor words to a build name."""
@@ -258,13 +265,13 @@ def build_name_and_blurb(
     picks: List[SubBreakpoint],
     final_levels: Dict[Tuple[str, str], int],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, set],
+    theme_excludes: Dict[str, set],
     name_max_hooks: int,
     use_adjective: bool,
 ) -> Tuple[str, str]:
     comp = _composition_role(final_levels)
     dom = _dominant_parent(final_levels)
-    adjective = pick_adjective_for(final_levels, themes, theme_requirements)
+    adjective = pick_adjective_for(final_levels, themes, theme_excludes)
     blurb = themes.get(adjective, "themed build")
     role1 = _pick_role_suffix(dom, comp)
     role2 = None
@@ -311,7 +318,7 @@ def format_build(
 def suggest_build(
     sub_bps: List[SubBreakpoint],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, set],
+    theme_excludes: Dict[str, set],
     level_cap: int = DEFAULTS.level_cap,
     num_subclass_weights: Dict[int, float] = None,
     composition_weights: Dict[str, float] = None,
@@ -362,7 +369,7 @@ def suggest_build(
                 picks,
                 finals,
                 themes,
-                theme_requirements,
+                theme_excludes,
                 name_max_hooks,
                 use_adjective,
             )
@@ -381,12 +388,12 @@ def suggest_build(
 def suggest_many(
     sub_bps: List[SubBreakpoint],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, set],
+    theme_excludes: Dict[str, set],
     n: int = 4,
     **kwargs,
 ) -> List[Tuple[str, str]]:
     out = []
     for _ in range(n):
-        name, line = suggest_build(sub_bps, themes, theme_requirements, **kwargs)
+        name, line = suggest_build(sub_bps, themes, theme_excludes, **kwargs)
         out.append((name, line))
     return out

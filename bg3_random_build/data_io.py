@@ -27,15 +27,15 @@ def load_themes(path: str) -> Tuple[Dict[str, str], Dict[str, Set[str]]]:
         raise FileNotFoundError(f"Theme file not found: {path}")
 
     themes: Dict[str, str] = {}
-    reqs: Dict[str, Set[str]] = {}
+    excludes: Dict[str, Set[str]] = {}
     with open(path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             adj = row["adjective"].strip()
             blurb = row["blurb"].strip()
             themes[adj] = blurb
-            raw = (row.get("requirements") or "").strip()
+            raw = (row.get("exclude") or "").strip()
             if raw:
-                reqs[adj] = {s.strip() for s in raw.split(";") if s.strip()}
+                excludes[adj] = {s.strip() for s in raw.split(";") if s.strip()}
 
-    return themes, reqs
+    return themes, excludes
