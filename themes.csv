@@ -8,7 +8,7 @@ Venomous,"Prioritize Poison damage, toxins, coatings, poison clouds, and dirty t
 Radiant,Prioritize Radiant damage and light-based punishment whenever possible.,radiant
 Necrotic,"Prioritize Necrotic damage, death magic, curses, spores, and life-draining effects.",necrotic
 Psychic,"Prioritize Psychic damage, mind effects, fear, confusion, charms, and illithid-flavored options.",psychic
-Forceful,"Prioritize Force damage, Magic Missile-style reliability, Eldritch Blast, and forced movement.",force
+Forceful,"Prioritize Force damage, reliability and forced movement.",force
 Serrated,"Prioritize Slashing damage with swords, axes, glaives, scimitars, or any sharp solution.",martial;wildshape
 Skewering,"Prioritize Piercing damage with bows, crossbows, daggers, rapiers, spears, or thrown pointy things.",martial;ranged;thrown;wildshape
 Blunt,"Prioritize Bludgeoning damage with hammers, maces, clubs, staves, fists, or thrown furniture.",martial;unarmed;thrown;wildshape

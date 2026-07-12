@@ -237,6 +237,7 @@ def adjective_fits(
     adjective: str,
     build_capabilities: Set[str],
     theme_requirements: ThemeRequirements,
+    has_martial_access: bool = True,
 ) -> bool:
     alternatives = theme_requirements.get(adjective)
     if not alternatives:
@@ -253,19 +254,47 @@ def adjective_fits(
                 part.strip() for part in required.split("+") if part.strip()
             )
         normalized.append(required)
-    return any(required.issubset(build_capabilities) for required in normalized)
+    return any(
+        required.issubset(build_capabilities)
+        and ("martial" not in required or has_martial_access)
+        for required in normalized
+    )
+
+
+def _has_martial_theme_access(
+    final_levels: Dict[Tuple[str, str], int],
+    picks: List[SubBreakpoint],
+) -> bool:
+    """Return whether the finished build may use martial-gated themes.
+
+    Martial themes require either a Rogue level or a class/subclass that has
+    actually reached its Extra Attack threshold. Merely carrying the martial
+    capability tag is not enough.
+    """
+    has_rogue = any(
+        parent == "Rogue" and level >= 4
+        for (_, parent), level in final_levels.items()
+    )
+    return has_rogue or _has_extra_attack(final_levels, picks)
 
 
 def pick_adjective_for(
     picks: List[SubBreakpoint],
+    final_levels: Dict[Tuple[str, str], int],
     themes: Dict[str, str],
     theme_requirements: ThemeRequirements,
 ) -> str:
     build_capabilities = _build_capabilities(picks)
+    has_martial_access = _has_martial_theme_access(final_levels, picks)
     fitting = [
         adjective
         for adjective in themes
-        if adjective_fits(adjective, build_capabilities, theme_requirements)
+        if adjective_fits(
+            adjective,
+            build_capabilities,
+            theme_requirements,
+            has_martial_access=has_martial_access,
+        )
     ]
     if not fitting:
         raise RuntimeError(
@@ -326,7 +355,7 @@ def build_name_and_blurb(
 ) -> Tuple[str, str]:
     comp = _composition_role(final_levels)
     dom = _dominant_parent(final_levels)
-    adjective = pick_adjective_for(picks, themes, theme_requirements)
+    adjective = pick_adjective_for(picks, final_levels, themes, theme_requirements)
     blurb = themes.get(adjective, "themed build")
     role1 = _pick_role_suffix(dom, comp)
     role2 = None
