@@ -51,7 +51,7 @@ Migraine,Build around a Psychic + Piercing damage identity. Try to make both dam
 Brainbonking,Build around a Psychic + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,psychic+martial;psychic+unarmed;psychic+shillelagh
 Spellslicing,Build around a Force + Slashing damage identity. Try to make both damage types matter in most major fights.,force+martial
 Ballistic,Build around a Force + Piercing damage identity. Try to make both damage types matter in most major fights.,force+martial;force+ranged
-Catapulting,Build around a Force + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,force+martial;force+unarmed
+Catapulting,Build around a Force + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,force+martial+caster;force+unarmed,force+ranged
 Sharpshooting,Use bows as your main weapon plan whenever possible.,ranged
 Crossbowed,"Prefer hand crossbows, light crossbows, or heavy crossbows over other ranged weapons.",ranged
 Polearmed,"Use spears, pikes, halberds, glaives, or tridents as your signature weapon type.",martial
@@ -120,8 +120,8 @@ Harmonic,Build around Phalar Aluve and use Sing or Shriek in every major fight.,
 Melodic,Keep Phalar Aluve central to the party plan and make its aura matter.,
 Melancholic,Build around Sorrow and use Sorrowful Lash whenever it creates value.,
 Spiteful,Make Sorrow your signature weapon and drag enemies exactly where you want them.,
-Hungry,Build around Shattered Flail and keep attacking to satisfy the weapon's demands.,tank
-Flail-Happy,Use Shattered Flail as your signature weapon and turn its drawback into a personality trait.,tank
+Hungry,Build around Shattered Flail and keep attacking to satisfy the weapon's demands.,tank+martial
+Flail-Happy,Use Shattered Flail as your signature weapon and turn its drawback into a personality trait.,tank+martial
 Savage,Build around Vicious Battleaxe and lean into brutal melee pressure.,martial
 Battleaxed,Use Vicious Battleaxe as your signature weapon and make every hit feel personal.,martial
 Dwarven,Build around Dwarven Thrower and throw it whenever possible.,thrown

@@ -60,5 +60,5 @@ Divination,2;6,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;nec
 Enchantment,2,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Evocation,2;10,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Illusion,2,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
-Necromancy,2;6,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;summons
+Necromancy,5;6,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;summons
 Transmutation,2;6,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
