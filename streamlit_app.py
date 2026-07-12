@@ -18,12 +18,12 @@ DEFAULT_COMPOSITION_WEIGHTS = getattr(
 ) or {"martial": 0.25, "caster": 0.35, "hybrid": 0.40}
 
 
-@st.cache_data
 def _load_breakpoints(path: str):
+    # These CSVs are tiny. Avoid Streamlit's persistent cache here because
+    # cached values from the old CSV schema can survive an app upgrade.
     return load_breakpoints(path)
 
 
-@st.cache_data
 def _load_themes(path: str):
     return load_themes(path)
 
@@ -71,6 +71,14 @@ with st.expander("Subclass picker"):
         "Leave a class empty to exclude that parent class entirely."
     )
     grouped = _subclasses_by_parent(sub_bps_all)
+
+    # Remove stale widget state left by classes that disappeared from the CSV
+    # This matters after a hot reload or deployment.
+    valid_widget_keys = {f"subclasses_{parent}" for parent in grouped}
+    for key in list(st.session_state):
+        if key.startswith("subclasses_") and key not in valid_widget_keys:
+            del st.session_state[key]
+
     selected_subclasses = set()
     for parent, subclasses in grouped.items():
         selected = st.multiselect(

@@ -241,7 +241,19 @@ def adjective_fits(
     alternatives = theme_requirements.get(adjective)
     if not alternatives:
         return True
-    return any(required.issubset(build_capabilities) for required in alternatives)
+
+    # Current loaders return a list of frozensets. This small compatibility
+    # guard also handles legacy in-memory values from the old web app schema.
+    normalized = []
+    if isinstance(alternatives, str):
+        alternatives = [part.strip() for part in alternatives.split(";") if part.strip()]
+    for required in alternatives:
+        if isinstance(required, str):
+            required = frozenset(
+                part.strip() for part in required.split("+") if part.strip()
+            )
+        normalized.append(required)
+    return any(required.issubset(build_capabilities) for required in normalized)
 
 
 def pick_adjective_for(

@@ -21,7 +21,7 @@ DEFAULTS = Defaults(
 )
 
 MARTIAL_PARENTS = {"Barbarian", "Fighter", "Paladin", "Ranger", "Rogue", "Monk"}
-CASTER_PARENTS = {"Wizard", "Sorcerer", "Warlock", "Cleric", "Druid", "Bard", "Artificer"}
+CASTER_PARENTS = {"Wizard", "Sorcerer", "Warlock", "Cleric", "Druid", "Bard"}
 
 EA_PARENT_THRESHOLDS = {
     "Barbarian": 5,
@@ -34,8 +34,6 @@ EA_SUBCLASS_THRESHOLDS = {
     ("Bard", "Valour"): 6,
     ("Bard", "Sword"): 6,
     ("Wizard", "Bladesinging"): 6,
-    ("Artificer", "Armorer"): 5,
-    ("Artificer", "Battle Smith"): 5,
 }
 
 ROLE_SUFFIX_BY_PARENT = {
@@ -51,7 +49,6 @@ ROLE_SUFFIX_BY_PARENT = {
     "Sorcerer": ["Stormcaller", "Spellblood", "Wildmage", "Arcanist", "Channeler", "Scion"],
     "Warlock": ["Hexbinder", "Pactblade", "Occultist", "Binder", "Doomspeaker", "Invoker"],
     "Wizard": ["Magister", "Arcanist", "Spellwright", "Runesage", "Evoker", "Savant"],
-    "Artificer": ["Inventor", "Machinist", "Spellsmith", "Tinkerer", "Arcanotech", "Engineer"],
 }
 SECONDARY_SUFFIX_BY_COMP = {
     "martial": ["Slayer", "Vanguard", "Skirmisher", "Marauder", "Sentinel", "Duelist"],
@@ -71,5 +68,4 @@ FLAVOR_MAP = {
     "Sorcerer": ["Spark", "Tempest", "Pulse", "Bloodline", "Surge", "Ember"],
     "Warlock": ["Pact", "Hex", "Whisper", "Bargain", "Eldritch", "Gloam"],
     "Wizard": ["Rune", "Glyph", "Sigil", "Weave", "Grimoire", "Ward"],
-    "Artificer": ["Gear", "Gadget", "Aether", "Turret", "Elixir", "Runeplate"],
 }
