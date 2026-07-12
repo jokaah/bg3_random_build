@@ -1,5 +1,5 @@
 import random
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, FrozenSet, List, Optional, Set, Tuple
 
 from .config import (
     CASTER_PARENTS,
@@ -11,6 +11,7 @@ from .config import (
     ROLE_SUFFIX_BY_PARENT,
     SECONDARY_SUFFIX_BY_COMP,
 )
+from .data_io import ThemeRequirements
 from .models import SubBreakpoint
 
 
@@ -76,6 +77,41 @@ def choose_parents_for_composition(k: int, available_parents: List[str], comp_ta
         return parents
 
     return choose_k_parents(k, available_parents)
+
+
+def choose_subclasses_for_composition(
+    k: int,
+    options_by_subclass: Dict[str, List[SubBreakpoint]],
+    comp_target: str,
+    max_tries: int = 2000,
+) -> List[str]:
+    """Choose subclasses directly so breakpoint count cannot affect selection weight.
+
+    A valid build may use at most one subclass from each parent class. Composition
+    constraints are checked after sampling, keeping subclasses within each eligible
+    composition equally likely rather than choosing parent classes first.
+    """
+    subclasses = list(options_by_subclass)
+    if k > len(subclasses):
+        return []
+
+    for _ in range(max_tries):
+        chosen = random.sample(subclasses, k)
+        parents = [options_by_subclass[subclass][0].parent_class for subclass in chosen]
+        if len(set(parents)) != k:
+            continue
+
+        has_martial = any(parent in MARTIAL_PARENTS for parent in parents)
+        has_caster = any(parent in CASTER_PARENTS for parent in parents)
+        if comp_target == "martial" and not all(parent in MARTIAL_PARENTS for parent in parents):
+            continue
+        if comp_target == "caster" and not all(parent in CASTER_PARENTS for parent in parents):
+            continue
+        if comp_target == "hybrid" and (k < 2 or not has_martial or not has_caster):
+            continue
+        return chosen
+
+    return []
 
 
 def try_find_combo_for_subclasses(
@@ -190,27 +226,41 @@ def _parents_in_build(final_levels: Dict[Tuple[str, str], int]) -> Set[str]:
     return parents
 
 
+def _build_capabilities(picks: List[SubBreakpoint]) -> Set[str]:
+    capabilities: Set[str] = set()
+    for bp in picks:
+        capabilities.update(bp.capabilities)
+    return capabilities
+
+
 def adjective_fits(
     adjective: str,
-    final_levels: Dict[Tuple[str, str], int],
-    theme_requirements: Dict[str, Set[str]],
+    build_capabilities: Set[str],
+    theme_requirements: ThemeRequirements,
 ) -> bool:
-    req = theme_requirements.get(adjective)
-    if not req:
+    alternatives = theme_requirements.get(adjective)
+    if not alternatives:
         return True
-    return _dominant_parent(final_levels) in req
+    return any(required.issubset(build_capabilities) for required in alternatives)
 
 
 def pick_adjective_for(
-    final_levels: Dict[Tuple[str, str], int],
+    picks: List[SubBreakpoint],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, Set[str]],
+    theme_requirements: ThemeRequirements,
 ) -> str:
-    fitting = [a for a in themes.keys() if adjective_fits(a, final_levels, theme_requirements)]
-    if fitting:
-        return random.choice(fitting)
-    return random.choice(list(themes.keys()))
-
+    build_capabilities = _build_capabilities(picks)
+    fitting = [
+        adjective
+        for adjective in themes
+        if adjective_fits(adjective, build_capabilities, theme_requirements)
+    ]
+    if not fitting:
+        raise RuntimeError(
+            "No theme matches the selected subclasses' capabilities. "
+            "Add an unrestricted theme or review the capability tags."
+        )
+    return random.choice(fitting)
 
 def _levels_by_parent(final_levels: Dict[Tuple[str, str], int]) -> Dict[str, int]:
     by_parent: Dict[str, int] = {}
@@ -258,13 +308,13 @@ def build_name_and_blurb(
     picks: List[SubBreakpoint],
     final_levels: Dict[Tuple[str, str], int],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, set],
+    theme_requirements: ThemeRequirements,
     name_max_hooks: int,
     use_adjective: bool,
 ) -> Tuple[str, str]:
     comp = _composition_role(final_levels)
     dom = _dominant_parent(final_levels)
-    adjective = pick_adjective_for(final_levels, themes, theme_requirements)
+    adjective = pick_adjective_for(picks, themes, theme_requirements)
     blurb = themes.get(adjective, "themed build")
     role1 = _pick_role_suffix(dom, comp)
     role2 = None
@@ -311,7 +361,7 @@ def format_build(
 def suggest_build(
     sub_bps: List[SubBreakpoint],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, set],
+    theme_requirements: ThemeRequirements,
     level_cap: int = DEFAULTS.level_cap,
     num_subclass_weights: Dict[int, float] = None,
     composition_weights: Dict[str, float] = None,
@@ -339,12 +389,12 @@ def suggest_build(
             continue
 
         comp_target = weighted_choice_str(composition_weights)
-        parents = choose_parents_for_composition(k, available_parents, comp_target)
-        if not parents:
-            continue
-
         for __ in range(80):
-            chosen_subclasses = [random.choice(subclasses_by_parent[p]) for p in parents]
+            chosen_subclasses = choose_subclasses_for_composition(
+                k, options_by_subclass, comp_target
+            )
+            if not chosen_subclasses:
+                continue
             picks = try_find_combo_for_subclasses(level_cap, chosen_subclasses, options_by_subclass)
             if not picks:
                 continue
@@ -381,7 +431,7 @@ def suggest_build(
 def suggest_many(
     sub_bps: List[SubBreakpoint],
     themes: Dict[str, str],
-    theme_requirements: Dict[str, set],
+    theme_requirements: ThemeRequirements,
     n: int = 4,
     **kwargs,
 ) -> List[Tuple[str, str]]:

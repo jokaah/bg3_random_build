@@ -36,3 +36,15 @@ adjective,blurb,requirements
 Ashen,fire-themed brawler or phoenix rebirth vibe,Sorcerer;Warlock;Wizard
 Ironbound,unyielding defensive frontline,Fighter;Barbarian;Paladin
 ```
+
+## CSV format
+
+`breakpoints.csv` stores one row per subclass. Put all valid breakpoint levels in the
+`levels` column separated by semicolons. Capabilities are also semicolon-separated.
+The generator chooses a subclass first and a valid breakpoint second, so subclasses
+with more breakpoint options are not made more likely by those extra options.
+
+`themes.csv` uses `required_capabilities`. Semicolons separate alternative requirements
+(OR), while plus signs combine capabilities that must all be present (AND). For example,
+`fire+martial;wildshape` accepts either a build with both `fire` and `martial`, or a
+build with `wildshape`.
