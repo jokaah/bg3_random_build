@@ -157,4 +157,16 @@ Phantom,Use Unseen Menace as your signature weapon and make unseen attacks your 
 Hellbound,Build around Hellfire Greataxe and embrace infernal power.,martial
 Infernal,Use Hellfire Greataxe as your signature weapon and leave scorched earth behind you.,martial
 Shadow,Use darkness and obscured areas to your advantage.,
-Summoner,Build up your own personal army of minions.,summons
+Summoner,Build your own personal army of minions.,summons
+Pure,Burn away corruption while mending your allies.,healer+fire
+Bloodthirsty,Heals through violence. Every wound is another opportunity.,healer+martial;healer+necrotic
+Beacon,A guiding light that shields and restores.,healer+radiant
+Necromancer,Raise servants that never tire.,summons+necrotic
+Hellish,Call forth creatures from the Hells.,summons+fire
+Skirmishing,Never stand still. Every attack is part of a dance across the battlefield.,mobile
+Elusive,"Strike where least expected, then vanish before retaliation arrives.",mobile
+Dancing,Grace and movement are your greatest weapons.,mobile
+Untouchable,Your greatest defense is never being where the enemy swings.,tank
+Puppeteer,Every enemy moves exactly where you want them to.,control
+Bewildering,"Leave your enemies confused, scattered, and unable to act.",control
+Oppressive,"Your enemies don't lose because they're weaker—they lose because they never get to fight.",control

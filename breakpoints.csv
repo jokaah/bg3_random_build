@@ -1,34 +1,34 @@
 subclass,levels,parent_class,capabilities
-Barbarian,3,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
+Barbarian,3,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile
 Berserker,5;7,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
-Wildheart,5;7;11,Barbarian,martial;tank;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
+Wildheart,5;7;11,Barbarian,martial;tank;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile
 Wildmagic Barbarian,5;7,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
 Giant,6;9;10,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
-Lore,6;10,Bard,caster;healer;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Sword,3;6;10,Bard,martial;tank;thrown;caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Glamour,6;10,Bard,caster;healer;thunder;psychic;fire;cold;acid;lightning
-Valour,6;10,Bard,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
+Lore,6;10,Bard,caster;healer;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
+Sword,3;6;10,Bard,martial;tank;thrown;caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;mobile;control
+Glamour,6;10,Bard,caster;healer;thunder;psychic;fire;cold;acid;lightning;control
+Valour,6;10,Bard,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;control
 War,1;2;6;11,Cleric,martial;tank;fire;cold;lightning;thunder;acid;poison;radiant;necrotic
 Trickery,5;11,Cleric,caster;healer;tank;radiant;necrotic
 Life,1;5;11,Cleric,caster;healer;tank;radiant;necrotic
-Knowledge,5;8;11,Cleric,caster;healer;tank;radiant;necrotic
+Knowledge,5;8;11,Cleric,caster;healer;tank;radiant;necrotic;control
 Nature,3;8;11,Cleric,caster;healer;tank;fire;cold;lightning;thunder;acid;poison;radiant;necrotic
 Tempest,2;6;11,Cleric,caster;tank;lightning;thunder;radiant
 Light,5;9;11,Cleric,caster;tank;radiant;fire
 Death,6;11,Cleric,caster;tank;radiant;necrotic
-Moon,6;10,Druid,wildshape;acid;fire;cold;thunder;lightning;poison
-Land,6;9;11,Druid,caster;shillelagh;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;summons
+Moon,6;10,Druid,wildshape;acid;fire;cold;thunder;lightning;poison;mobile
+Land,6;9;11,Druid,caster;shillelagh;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;summons;control
 Spore,2;6;11,Druid,caster;shillelagh;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;summons
 Star,2;6;11,Druid,caster;shillelagh;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;summons
 Fighter,2,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Battle Master,3;5;7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Champion,5;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Arcane Archer,5;7;11,Fighter,ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
+Battle Master,3;5;7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
+Champion,5;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;mobile
+Arcane Archer,5;7;11,Fighter,ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
 Eldritch Knight,7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;thrown
-Open Hand,6;9,Monk,unarmed;radiant;necrotic;psychic;force;fire;cold;lightning;improvised
-Shadow Monk,6;11,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
+Open Hand,6;9,Monk,unarmed;radiant;necrotic;psychic;force;fire;cold;lightning;improvised;mobile;control
+Shadow Monk,6;11,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile;control
 Four Elements,5;6,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
-Drunken,6;9,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
+Drunken,6;9,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile
 Paladin,2,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Devotion,3;5,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Ancients,7,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;healer
@@ -37,28 +37,28 @@ Crown,3;5;7;9,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;ne
 Oathbreaker,3;6;7,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Gloom Stalker,3;5;11,Ranger,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;ranged
 Hunter,3;5;11,Ranger,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;ranged
-Swarmkeeper,3;7;11,Ranger,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;ranged
+Swarmkeeper,3;7;11,Ranger,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;ranged;control
 Beast Master,7;11,Ranger,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;ranged;summons
 Rogue,1,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Thief,3;5;7;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;tank
-Assassin,3;5;7;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Swashbuckler,4;5;7;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Arcane Trickster,3;9;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;tank
-Shadow Magic,3;6,Sorcerer,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
+Thief,3;5;7;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;tank;mobile
+Assassin,3;5;7;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
+Swashbuckler,4;5;7;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;mobile
+Arcane Trickster,3;9;11,Rogue,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;tank;control
+Shadow Magic,3;6,Sorcerer,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
 Draconic,1;6,Sorcerer,caster;fire;cold;lightning;acid;poison
-Storm,1;6,Sorcerer,caster;lightning;cold;thunder
+Storm,1;6,Sorcerer,caster;lightning;cold;thunder;control
 Wild Magic,3;6;11,Sorcerer,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Archfey,2;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force
-Fiend,2;5;9,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force
+Archfey,2;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;mobile
+Fiend,2;5;9,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;summons;control
 Great Old One,2;5;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force
 Hexblade,1;2;5;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force
-Wizard,1,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
+Wizard,1,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
 Abjuration,2;6;10,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Bladesinging,6;9,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;martial
+Bladesinging,6;9,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;martial;mobile
 Conjuration,2,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Divination,2;6,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Enchantment,2,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Evocation,2;10,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Illusion,2,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
+Illusion,2,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
 Necromancy,2;6,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;summons
 Transmutation,2;6,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
