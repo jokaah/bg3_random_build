@@ -1,4 +1,4 @@
-﻿adjective,blurb,required_capabilities
+adjective,blurb,required_capabilities
 Pyromaniacal,"Prioritize Fire damage whenever possible: spells, arrows, surfaces, explosives, torches, or burning weapons.",fire
 Frostbitten,"Prioritize Cold damage whenever possible, especially ice surfaces, chilled enemies, and wet targets.",cold
 Voltaic,"Prioritize Lightning damage whenever possible, especially against Wet enemies.",lightning
