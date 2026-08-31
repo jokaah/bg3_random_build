@@ -4,7 +4,7 @@ Berserker,5;7,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poi
 Wildheart,5;7;11,Barbarian,martial;tank;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile
 Wildmagic Barbarian,5;7,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
 Giant,6;9;10,Barbarian,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
-Lore,6;10,Bard,caster;healer;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
+Lore,6;10,Bard,caster;healer;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;control
 Sword,3;6;10,Bard,martial;tank;thrown;caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;mobile;control
 Glamour,6;10,Bard,caster;healer;thunder;psychic;fire;cold;acid;lightning;control
 Valour,6;10,Bard,martial;tank;thrown;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;control
@@ -27,7 +27,7 @@ Arcane Archer,5;7;11,Fighter,ranged;fire;cold;lightning;thunder;acid;poison;radi
 Eldritch Knight,7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;thrown
 Open Hand,6;9,Monk,unarmed;radiant;necrotic;psychic;force;fire;cold;lightning;improvised;mobile;control
 Shadow Monk,6;11,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile;control
-Four Elements,5;6,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised
+Four Elements,5;6,Monk,martial;unarmed;fire;improvised
 Drunken,6;9,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile
 Paladin,2,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Devotion,3;5,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
