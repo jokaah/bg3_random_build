@@ -1,4 +1,4 @@
-adjective,blurb,required_capabilities
+﻿adjective,blurb,required_capabilities
 Pyromaniacal,"Prioritize Fire damage whenever possible: spells, arrows, surfaces, explosives, torches, or burning weapons.",fire
 Frostbitten,"Prioritize Cold damage whenever possible, especially ice surfaces, chilled enemies, and wet targets.",cold
 Voltaic,"Prioritize Lightning damage whenever possible, especially against Wet enemies.",lightning
@@ -51,7 +51,7 @@ Migraine,Build around a Psychic + Piercing damage identity. Try to make both dam
 Brainbonking,Build around a Psychic + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,psychic+martial;psychic+unarmed;psychic+shillelagh
 Spellslicing,Build around a Force + Slashing damage identity. Try to make both damage types matter in most major fights.,force+martial
 Ballistic,Build around a Force + Piercing damage identity. Try to make both damage types matter in most major fights.,force+martial;force+ranged
-Catapulting,Build around a Force + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,force+martial+caster;force+unarmed,force+ranged
+Catapulting,Build around a Force + Bludgeoning damage identity. Try to make both damage types matter in most major fights.,force+martial+caster;force+unarmed;force+ranged
 Sharpshooting,Use bows as your main weapon plan whenever possible.,ranged
 Crossbowed,"Prefer hand crossbows, light crossbows, or heavy crossbows over other ranged weapons.",ranged
 Polearmed,"Use spears, pikes, halberds, glaives, or tridents as your signature weapon type.",martial
@@ -76,10 +76,7 @@ Heroic,"Save as many people as the game reasonably allows, even when it is incon
 Greedy,"Steal, pickpocket, extort, and loot whenever the opportunity appears.",
 Merciful,Spare enemies and NPCs whenever the game gives you a meaningful option.,
 Bloodthirsty,Kill major villains and dangerous enemies instead of sparing them.,
-Treacherous,"Betray factions, bosses, or allies whenever it creates a better opportunity.",
-Diplomatic,Try dialogue before violence in every major encounter.,
-Intimidating,"Prefer intimidation, threats, coercion, and displays of power in dialogue.",
-Deceptive,"Lie, disguise, impersonate, and manipulate your way through problems.",
+Treacherous,"Betray factions, bosses, or allies whenever the opportunity presents itself.",
 Naturebound,"Save the Grove and protect druids, tieflings, animals, and natural places when possible.",
 Raiding,Side against the Grove or otherwise take the crueler Act 1 route.,
 Liberating,Free the Nightsong and oppose those who would imprison her.,
@@ -93,69 +90,39 @@ Lonewolf,Minimize companion recruitment and handle things yourself. Do not put a
 Romantic,"Prioritize companion approval, romance scenes, and emotionally loyal choices.",
 Frugal,"Avoid buying gear unless absolutely necessary; loot, steal, craft, or scavenge instead.",
 Chaotic,Pick the funniest or most disruptive option whenever it does not end the run.,
-Lawful,"Respect contracts, bargains, oaths, guards, and formal authority whenever possible.",
-Rebellious,"Undermine tyrants, cults, slavers, and anyone who acts too smug.",
 Secretive,"Use stealth, invisibility, disguises, and surprise whenever possible.",
 Loud,"Avoid subtlety. Kick doors open, start fights openly, and make your entrance obvious.",
 Barrelmancing,"Use barrels, surfaces, explosives, and environmental hazards as legitimate strategy.",
 Mighty,Obtain Titanstring Bow and build around its Strength-scaling ranged damage.,ranged
-Bullseye,Make Titanstring Bow your signature weapon and solve fights from range.,ranged
 Unerring,"Build around The Dead Shot and chase accuracy, critical hits, and clean ranged kills.",ranged
-Deadshot,"Use The Dead Shot as your endgame identity: one archer, one target, no mercy.",ranged
 Cyclonic,Build around Nyrulna as a thrown or melee weapon and embrace thunderous chaos.,martial;thrown
-Tridented,Make Nyrulna your signature weapon and throw yourself into every fight like a storm.,martial;thrown
 Dawnlit,Build around The Blood of Lathander and carry its radiant power through the shadowed parts of the game.,martial;tank
-Lathandrian,Use The Blood of Lathander as your signature weapon and play like the sun has legal representation.,martial;tank
 Titanic,Build around Balduran's Giantslayer and hunt the biggest enemies on the map.,martial
-Giant-Slaying,Use Balduran's Giantslayer as your boss-killing identity and make Strength matter.,martial
 Ridiculous,Build around Clown Hammer and commit to the bit even when better weapons exist.,martial
-Clownish,Use Clown Hammer as your signature weapon and turn serious encounters into slapstick violence.,martial
 Bulwarked,Build around Defender Flail and become annoyingly difficult to remove from the frontline.,tank
-Flail-Safe,Use Defender Flail as your defensive identity and keep enemies stuck dealing with you.,tank
 Elegant,Build around Larethian's Wrath and fight like a graceful blade-dancer.,martial
-Larethian,"Use Larethian's Wrath as your signature weapon and make finesse, reach, or style matter.",martial
 Primitive,Build around Magic Club and prove that enchanted bonking is still magic.,shillelagh;martial
-Clubby,Use Magic Club as your signature weapon and keep the plan beautifully simple.,shillelagh;martial
 Harmonic,Build around Phalar Aluve and use Sing or Shriek in every major fight.,
-Melodic,Keep Phalar Aluve central to the party plan and make its aura matter.,
 Melancholic,Build around Sorrow and use Sorrowful Lash whenever it creates value.,
-Spiteful,Make Sorrow your signature weapon and drag enemies exactly where you want them.,
 Hungry,Build around Shattered Flail and keep attacking to satisfy the weapon's demands.,tank+martial
-Flail-Happy,Use Shattered Flail as your signature weapon and turn its drawback into a personality trait.,tank+martial
 Savage,Build around Vicious Battleaxe and lean into brutal melee pressure.,martial
-Battleaxed,Use Vicious Battleaxe as your signature weapon and make every hit feel personal.,martial
 Dwarven,Build around Dwarven Thrower and throw it whenever possible.,thrown
-Returning,Make Dwarven Thrower your signature weapon and treat every enemy as target practice.,thrown
 Watchful,"Build around Halberd of Vigilance and use reach, initiative, and control to dominate space.",martial
-Vigilant,Use Halberd of Vigilance as your signature weapon and punish enemies before they settle in.,martial
 Cherished,Build around Staff of Cherished Necromancy and lean into Necromancy spells.,caster+necrotic
-Necromantic,Make Staff of Cherished Necromancy your spellcasting identity and feed on death magic.,caster+necrotic
 Vampiric,Build around Sword of Life Stealing and chase critical hits that keep you alive.,martial
-Life-Stealing,Use Sword of Life Stealing as your signature weapon and sustain through violence.,martial
 Graceful,"Build around The Dancing Breeze and make reach, mobility, and finesse the point.",martial
-Breezy,Use The Dancing Breeze as your signature weapon and dance around the battlefield.,martial
 Sacred,Build around The Sacred Star and stack radiant pressure wherever possible.,martial;tank
-Starry,Use The Sacred Star as your signature weapon and make holy bonking your answer to evil.,martial;tank
 Duelist,Build around Duellist's Prerogative and fight with a single elegant weapon.,martial
-Prerogative,Use Duellist's Prerogative as your signature weapon and make one-on-one combat your fantasy.,martial
 Astral,Build around Silver Sword of the Astral Plane and embrace a githyanki or astral-warrior identity.,martial
-Silvered,Use Silver Sword of the Astral Plane as your signature weapon and make psychic-edged melee your thing.,martial
 Isekaid,"You were just an ordinary person until you suddenly found yourself stranded in Faerûn. Limit meta gaming whenever possible, and only replace one equipment slot after each boss kill.",
 Healer,Be a healer for your party.,healer
 Punch-Drunk,Use Punch-Drunk Bastard as your signature weapon and turn every fight into a tavern brawl.,martial
-Tipsy,"Build around Punch-Drunk Bastard and embrace alcohol, chaos, and reckless melee.",martial
 Mourning,Build around Mourning Frost and spread cold wherever you go.,shillelagh;martial;caster+cold
-Frozen,Use Mourning Frost as your signature weapon and leave your enemies encased in ice.,shillelagh;martial;caster+cold
 Burrowing,Build around The Skinburster and become nearly impossible to bring down.,martial+tank
-Impaling,Use The Skinburster as your signature weapon and let every thrust harden your defenses.,martial+tank
 Cleave,Build around Jorgoral's Greatsword and dominate fights against multiple enemies.,martial
-Whirlwind,Use Jorgoral's Greatsword as your signature weapon and overwhelm groups with sweeping attacks.,martial
 Turret,Build around Ne'er Misser and make ranged attacks your reliable answer to every problem.,ranged
-Deadeye,Use Ne'er Misser as your signature weapon and prioritize precision over brute force.,ranged
 Invisible,Build around Unseen Menace and strike from the shadows whenever possible.,martial
-Phantom,Use Unseen Menace as your signature weapon and make unseen attacks your specialty.,martial
 Hellbound,Build around Hellfire Greataxe and embrace infernal power.,martial
-Infernal,Use Hellfire Greataxe as your signature weapon and leave scorched earth behind you.,martial
 Shadow,Use darkness and obscured areas to your advantage.,
 Summoner,Build your own personal army of minions.,summons
 Pure,Burn away corruption while mending your allies.,healer+fire
@@ -169,5 +136,29 @@ Dancing,Grace and movement are your greatest weapons.,mobile
 Untouchable,Your greatest defense is never being where the enemy swings.,tank
 Puppeteer,Every enemy moves exactly where you want them to.,control
 Bewildering,"Leave your enemies confused, scattered, and unable to act.",control
-Oppressive,"Your enemies don't lose because they're weaker—they lose because they never get to fight.",control
-Otherwordly,"Find the coolest weapon and or armor mod and play with those items from the start of the game.",
+Oppressive,Your enemies don't lose because they're weaker—they lose because they never get to fight.,control
+Otherwordly,Find the coolest weapon and/or armor mod and play with those items from the start of the game.,
+Azer-Forged,Build around Azer Warhammer and bring relentless fire-forged hammer blows to the frontline.,martial
+Deva-Touched,Make Deva Mace your signature weapon and deliver radiant judgment in melee.,martial;radiant
+Djinni-Blessed,Build around Djinni Scimitar and fight with the speed and flair of an elemental duelist.,martial
+Vortical,Make Flail of the Vortex your signature weapon and turn every melee into a violent storm.,martial
+Improvised,Build around Makeshift Bow and prove that humble equipment can still carry a run.,ranged
+Cinderborn,Make Scimitar of Cinder your signature weapon and carve through enemies with fire at your side.,martial;fire
+Abyssal,Build around Trident of the Depths and embrace a deep-sea warrior identity.,martial;thrown
+Flamewreathed,Use Flame Blade as your signature weapon and solve close-range problems with conjured fire.,martial;caster+fire
+Ronin,"Build around Katana and fight as a disciplined, precise swordmaster.",martial
+Conductive,Make Light of Creation your signature weapon and lean into its dangerous lightning-charged power.,martial;lightning
+Scourged,"Build around Loviatar's Scourge and make pain, punishment, and brutal melee your identity.",martial
+Skull-Staving,Make Shining Staver-of-Skulls your signature weapon and bring radiant blunt-force justice.,martial;radiant
+Blooded,Build around Blooded Greataxe and stay aggressive when the fighting gets ugly.,martial
+Cacophonous,Make Cacophony your signature weapon and punctuate every melee with thunderous force.,martial;thunder
+Charge-Bound,Build around Charge-Bound Warhammer and keep its magical bond central to your combat plan.,martial
+Caustic,Make Corrosive Flail your signature weapon and batter enemies with acid-laced brutality.,martial;acid
+Cruel,Build around Cruel Sting and fight like a merciless drow blade-master.,martial
+Aged,Make Flail of Ages your signature weapon and exploit its elemental versatility whenever possible.,martial
+Moonlit,Build around Moonlight Glaive and sweep through enemies with radiant lunar power.,martial;radiant
+Ratcatching,Make Rat Bat your signature weapon and commit completely to vermin-themed blunt-force violence.,martial
+Thermodynamic,Build around Thermodynamo Axe and turn heat generation into relentless melee pressure.,martial;fire
+Thorned,"Make Thorn Blade your signature weapon and fight as a mobile, nature-touched scimitar wielder.",martial
+Ramming,Build around Staff of the Ram and use its forceful strikes to batter enemies out of position.,martial;force
+Vossian,Make Voss' Silver Sword your signature weapon and embrace a githyanki silver-sword warrior identity.,martial
