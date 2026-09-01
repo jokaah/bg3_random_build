@@ -283,13 +283,16 @@ def pick_adjective_for(
     final_levels: Dict[Tuple[str, str], int],
     themes: Dict[str, str],
     theme_requirements: ThemeRequirements,
+    excluded_adjectives: Optional[Set[str]] = None,
 ) -> str:
     build_capabilities = _build_capabilities(picks)
     has_martial_access = _has_martial_theme_access(final_levels, picks)
+    excluded_adjectives = excluded_adjectives or set()
     fitting = [
         adjective
         for adjective in themes
-        if adjective_fits(
+        if adjective not in excluded_adjectives
+        and adjective_fits(
             adjective,
             build_capabilities,
             theme_requirements,
@@ -297,6 +300,10 @@ def pick_adjective_for(
         )
     ]
     if not fitting:
+        if excluded_adjectives:
+            raise RuntimeError(
+                "No unused theme matches the selected subclasses' capabilities."
+            )
         raise RuntimeError(
             "No theme matches the selected subclasses' capabilities. "
             "Add an unrestricted theme or review the capability tags."
@@ -310,7 +317,28 @@ def _levels_by_parent(final_levels: Dict[Tuple[str, str], int]) -> Dict[str, int
     return by_parent
 
 
+def _primary_class_subclasses(
+    final_levels: Dict[Tuple[str, str], int]
+) -> Set[Tuple[str, str]]:
+    """Return every (parent class, subclass) tied for the highest level investment.
+
+    Batch uniqueness is subclass-aware: Moon Druid and Stars Druid are distinct
+    primaries. If two class/subclass entries tie for the most levels in one build,
+    both are claimed by that build.
+    """
+    if not final_levels:
+        return set()
+    highest = max(final_levels.values())
+    return {
+        (parent, subclass)
+        for (subclass, parent), levels in final_levels.items()
+        if levels == highest
+    }
+
+
 def _dominant_parent(final_levels: Dict[Tuple[str, str], int]) -> str:
+    # Naming still needs one class. Keep the previous deterministic tie behavior
+    # here; batch uniqueness uses _primary_class_subclasses() and sees all ties.
     by_parent = _levels_by_parent(final_levels)
     return max(by_parent.items(), key=lambda kv: kv[1])[0]
 
@@ -345,17 +373,24 @@ def _pick_role_suffix(dominant_parent: str, comp: str) -> str:
     return random.choice(["Caster", "Invoker", "Arcanist"])
 
 
-def build_name_and_blurb(
+def _build_name_blurb_and_theme(
     picks: List[SubBreakpoint],
     final_levels: Dict[Tuple[str, str], int],
     themes: Dict[str, str],
     theme_requirements: ThemeRequirements,
     name_max_hooks: int,
     use_adjective: bool,
-) -> Tuple[str, str]:
+    excluded_adjectives: Optional[Set[str]] = None,
+) -> Tuple[str, str, str]:
     comp = _composition_role(final_levels)
     dom = _dominant_parent(final_levels)
-    adjective = pick_adjective_for(picks, final_levels, themes, theme_requirements)
+    adjective = pick_adjective_for(
+        picks,
+        final_levels,
+        themes,
+        theme_requirements,
+        excluded_adjectives=excluded_adjectives,
+    )
     blurb = themes.get(adjective, "themed build")
     role1 = _pick_role_suffix(dom, comp)
     role2 = None
@@ -381,7 +416,27 @@ def build_name_and_blurb(
     parts.append(role1)
     if role2:
         parts.append(role2)
-    return " ".join(parts), blurb
+    return " ".join(parts), blurb, adjective
+
+
+def build_name_and_blurb(
+    picks: List[SubBreakpoint],
+    final_levels: Dict[Tuple[str, str], int],
+    themes: Dict[str, str],
+    theme_requirements: ThemeRequirements,
+    name_max_hooks: int,
+    use_adjective: bool,
+) -> Tuple[str, str]:
+    """Backward-compatible public naming helper."""
+    name, blurb, _ = _build_name_blurb_and_theme(
+        picks,
+        final_levels,
+        themes,
+        theme_requirements,
+        name_max_hooks,
+        use_adjective,
+    )
+    return name, blurb
 
 
 def format_build(
@@ -399,7 +454,7 @@ def format_build(
     return f"{core} ({blurb})" if include_blurb and blurb else core
 
 
-def suggest_build(
+def _suggest_build_with_metadata(
     sub_bps: List[SubBreakpoint],
     themes: Dict[str, str],
     theme_requirements: ThemeRequirements,
@@ -413,11 +468,16 @@ def suggest_build(
     name_max_hooks: int = DEFAULTS.name_max_hooks,
     use_adjective: bool = DEFAULTS.use_adjective,
     include_blurb: bool = True,
-) -> Tuple[str, str]:
+    excluded_primary_class_subclasses: Optional[Set[Tuple[str, str]]] = None,
+    excluded_themes: Optional[Set[str]] = None,
+) -> Tuple[str, str, Set[Tuple[str, str]], str]:
     if num_subclass_weights is None:
         num_subclass_weights = DEFAULTS.num_subclasses_weights
     if composition_weights is None:
         composition_weights = COMPOSITION_WEIGHT_DEFAULTS
+
+    excluded_primary_class_subclasses = excluded_primary_class_subclasses or set()
+    excluded_themes = excluded_themes or set()
 
     options_by_subclass, subclasses_by_parent = index_structures(sub_bps)
     available_parents = list(subclasses_by_parent.keys())
@@ -449,14 +509,25 @@ def suggest_build(
             if want_ea and not _has_extra_attack(finals, picks):
                 continue
 
-            name, blurb = build_name_and_blurb(
-                picks,
-                finals,
-                themes,
-                theme_requirements,
-                name_max_hooks,
-                use_adjective,
-            )
+            primary_class_subclasses = _primary_class_subclasses(finals)
+            if primary_class_subclasses & excluded_primary_class_subclasses:
+                continue
+
+            try:
+                name, blurb, adjective = _build_name_blurb_and_theme(
+                    picks,
+                    finals,
+                    themes,
+                    theme_requirements,
+                    name_max_hooks,
+                    use_adjective,
+                    excluded_adjectives=excluded_themes,
+                )
+            except RuntimeError:
+                # This candidate may have no unused compatible theme. Try another
+                # build, but remain bounded by max_global_attempts.
+                continue
+
             line = format_build(
                 picks,
                 finals,
@@ -464,9 +535,53 @@ def suggest_build(
                 show_parent_in_label,
                 include_blurb=include_blurb,
             )
-            return name, line
+            return name, line, primary_class_subclasses, adjective
 
+    constraints = []
+    if excluded_primary_class_subclasses:
+        constraints.append("an unused primary class/subclass")
+    if excluded_themes:
+        constraints.append("an unused compatible theme")
+    if constraints:
+        raise RuntimeError(
+            "No valid combination found with " + " and ".join(constraints) + ". "
+            "The batch may have exhausted the available unique options."
+        )
     raise RuntimeError("No valid combination found.")
+
+
+def suggest_build(
+    sub_bps: List[SubBreakpoint],
+    themes: Dict[str, str],
+    theme_requirements: ThemeRequirements,
+    level_cap: int = DEFAULTS.level_cap,
+    num_subclass_weights: Dict[int, float] = None,
+    composition_weights: Dict[str, float] = None,
+    max_global_attempts: int = 800,
+    show_parent_in_label: bool = DEFAULTS.show_parent_in_label,
+    require_ea_if_martial: bool = DEFAULTS.require_ea_if_martial,
+    prefer_ea_if_hybrid: float = DEFAULTS.prefer_ea_if_hybrid,
+    name_max_hooks: int = DEFAULTS.name_max_hooks,
+    use_adjective: bool = DEFAULTS.use_adjective,
+    include_blurb: bool = True,
+) -> Tuple[str, str]:
+    """Generate one build; batch-only uniqueness is handled by suggest_many()."""
+    name, line, _, _ = _suggest_build_with_metadata(
+        sub_bps,
+        themes,
+        theme_requirements,
+        level_cap=level_cap,
+        num_subclass_weights=num_subclass_weights,
+        composition_weights=composition_weights,
+        max_global_attempts=max_global_attempts,
+        show_parent_in_label=show_parent_in_label,
+        require_ea_if_martial=require_ea_if_martial,
+        prefer_ea_if_hybrid=prefer_ea_if_hybrid,
+        name_max_hooks=name_max_hooks,
+        use_adjective=use_adjective,
+        include_blurb=include_blurb,
+    )
+    return name, line
 
 
 def suggest_many(
@@ -476,8 +591,38 @@ def suggest_many(
     n: int = 4,
     **kwargs,
 ) -> List[Tuple[str, str]]:
-    out = []
+    """Generate a batch with unique primary class/subclass pairs and themes.
+
+    Every class/subclass pair tied for the greatest number of final levels counts
+    as a primary. A later build may use the same base class with a different
+    subclass, but may not reuse a primary class/subclass pair already claimed by
+    an earlier build. Themes are likewise unique within the batch. Generation is
+    bounded by suggest_build's max_global_attempts; exhaustion raises a clear
+    RuntimeError rather than retrying forever or silently allowing duplicates.
+    """
+    out: List[Tuple[str, str]] = []
+    used_primary_class_subclasses: Set[Tuple[str, str]] = set()
+    used_themes: Set[str] = set()
+
+    # When themes are disabled for output, do not let an invisible random theme
+    # constrain the batch. Otherwise enforce theme uniqueness.
+    enforce_theme_uniqueness = kwargs.get("use_adjective", DEFAULTS.use_adjective) or kwargs.get(
+        "include_blurb", True
+    )
+
     for _ in range(n):
-        name, line = suggest_build(sub_bps, themes, theme_requirements, **kwargs)
+        name, line, primary_class_subclasses, adjective = _suggest_build_with_metadata(
+            sub_bps,
+            themes,
+            theme_requirements,
+            excluded_primary_class_subclasses=used_primary_class_subclasses,
+            excluded_themes=used_themes if enforce_theme_uniqueness else set(),
+            **kwargs,
+        )
         out.append((name, line))
+        used_primary_class_subclasses.update(primary_class_subclasses)
+        if enforce_theme_uniqueness:
+            used_themes.add(adjective)
+
     return out
+

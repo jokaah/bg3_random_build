@@ -72,27 +72,8 @@ Backstabbing,"Use daggers, shortswords, rapiers, or stealthy melee attacks whene
 Boomeranging,"Use returning weapons, thrown weapons, and ranged repositioning tricks.",thrown
 Bonking,Every serious problem should eventually meet blunt force trauma.,shillelagh;martial;improvised
 Pointy,"Favor spears, arrows, bolts, daggers, rapiers, and other piercing options.",martial;ranged;thrown
-Heroic,"Save as many people as the game reasonably allows, even when it is inconvenient.",
-Greedy,"Steal, pickpocket, extort, and loot whenever the opportunity appears.",
-Merciful,Spare enemies and NPCs whenever the game gives you a meaningful option.,
-Bloodthirsty,Kill major villains and dangerous enemies instead of sparing them.,
-Treacherous,"Betray factions, bosses, or allies whenever the opportunity presents itself.",
-Naturebound,"Save the Grove and protect druids, tieflings, animals, and natural places when possible.",
-Raiding,Side against the Grove or otherwise take the crueler Act 1 route.,
-Liberating,Free the Nightsong and oppose those who would imprison her.,
-Obedient,Do not free the Nightsong; follow the darker path in the Shadow-Cursed Lands.,
-Wormy,Use tadpoles freely and unlock illithid powers as they become available.,
-Pristine,Refuse tadpoles and avoid illithid powers entirely.,
-Evolved,Accept the Astral Tadpole and lean into partial-illithid power.,
-Resistant,"Use early tadpoles if desired, but refuse the Astral Tadpole.",
-Companionable,Recruit as many companions as possible and resolve their personal quests.,
-Lonewolf,Minimize companion recruitment and handle things yourself. Do not put anyone else in danger.,
-Romantic,"Prioritize companion approval, romance scenes, and emotionally loyal choices.",
-Frugal,"Avoid buying gear unless absolutely necessary; loot, steal, craft, or scavenge instead.",
-Chaotic,Pick the funniest or most disruptive option whenever it does not end the run.,
-Secretive,"Use stealth, invisibility, disguises, and surprise whenever possible.",
-Loud,"Avoid subtlety. Kick doors open, start fights openly, and make your entrance obvious.",
-Barrelmancing,"Use barrels, surfaces, explosives, and environmental hazards as legitimate strategy.",
+Torchbearing,"Use torches and lanterns as your main weapons whenever possible, bringing firelight and blunt-force practicality into every fight.",martial;shillelagh
+Grenadier,"Fight with grenades, bombs, alchemical throwables, potions, elixirs and other consumable explosives whenever possible. Treat every encounter as an excuse to throw something dangerous.",thrown
 Mighty,Obtain Titanstring Bow and build around its Strength-scaling ranged damage.,ranged
 Unerring,"Build around The Dead Shot and chase accuracy, critical hits, and clean ranged kills.",ranged
 Cyclonic,Build around Nyrulna as a thrown or melee weapon and embrace thunderous chaos.,martial;thrown
@@ -114,8 +95,6 @@ Graceful,"Build around The Dancing Breeze and make reach, mobility, and finesse 
 Sacred,Build around The Sacred Star and stack radiant pressure wherever possible.,martial;tank
 Duelist,Build around Duellist's Prerogative and fight with a single elegant weapon.,martial
 Astral,Build around Silver Sword of the Astral Plane and embrace a githyanki or astral-warrior identity.,martial
-Isekaid,"You were just an ordinary person until you suddenly found yourself stranded in Faerûn. Limit meta gaming whenever possible, and only replace one equipment slot after each boss kill.",
-Healer,Be a healer for your party.,healer
 Punch-Drunk,Use Punch-Drunk Bastard as your signature weapon and turn every fight into a tavern brawl.,martial
 Mourning,Build around Mourning Frost and spread cold wherever you go.,shillelagh;martial;caster+cold
 Burrowing,Build around The Skinburster and become nearly impossible to bring down.,martial+tank
@@ -123,6 +102,31 @@ Cleave,Build around Jorgoral's Greatsword and dominate fights against multiple e
 Turret,Build around Ne'er Misser and make ranged attacks your reliable answer to every problem.,ranged
 Invisible,Build around Unseen Menace and strike from the shadows whenever possible.,martial
 Hellbound,Build around Hellfire Greataxe and embrace infernal power.,martial
+Azer-Forged,Build around Azer Warhammer and bring relentless fire-forged hammer blows to the frontline.,martial
+Deva-Touched,Make Deva Mace your signature weapon and deliver radiant judgment in melee.,martial;radiant
+Djinni-Blessed,Build around Djinni Scimitar and fight with the speed and flair of an elemental duelist.,martial
+Vortical,Make Flail of the Vortex your signature weapon and turn every melee into a violent storm.,martial
+Makeshift,Build around Makeshift Bow and prove that humble equipment can still carry a run.,ranged
+Cinderborn,Make Scimitar of Cinder your signature weapon and carve through enemies with fire at your side.,martial;fire
+Abyssal,Build around Trident of the Depths and embrace a deep-sea warrior identity.,martial;thrown
+Flamewreathed,Use Flame Blade as your signature weapon and solve close-range problems with conjured fire.,martial;caster+fire
+Ronin,"Build around Katana and fight as a disciplined, precise swordmaster.",martial
+Construct,Make Light of Creation your signature weapon and lean into its dangerous lightning-charged power.,martial;lightning
+Scourged,"Build around Loviatar's Scourge and make pain, punishment, and brutal melee your identity.",martial
+Skull-Staving,Make Shining Staver-of-Skulls your signature weapon and bring radiant blunt-force justice.,martial;radiant
+Blooded,Build around Blooded Greataxe and stay aggressive when the fighting gets ugly.,martial
+Cacophonous,Make Cacophony your signature weapon and punctuate every melee with thunderous force.,martial;thunder
+Charge-Bound,Build around Charge-Bound Warhammer and keep its magical bond central to your combat plan.,martial
+Caustic,Make Corrosive Flail your signature weapon and batter enemies with acid-laced brutality.,martial;acid
+Cruel,Build around Cruel Sting and fight like a merciless drow blade-master.,martial
+Aged,Make Flail of Ages your signature weapon and exploit its elemental versatility whenever possible.,martial
+Moonlit,Build around Moonlight Glaive and sweep through enemies with radiant lunar power.,martial;radiant
+Ratcatching,Make Rat Bat your signature weapon and commit completely to vermin-themed blunt-force violence.,martial
+Thermodynamic,Build around Thermodynamo Axe and turn heat generation into relentless melee pressure.,martial;fire
+Thorned,"Make Thorn Blade your signature weapon and fight as a mobile, nature-touched scimitar wielder.",martial
+Ramming,Build around Staff of the Ram and use its forceful strikes to batter enemies out of position.,martial;force
+Vlaakith-Devout,Make Voss' Silver Sword your signature weapon and embrace Vlaakith.,martial
+Healer,Be the healer for your party.,healer
 Shadow,Use darkness and obscured areas to your advantage.,
 Summoner,Build your own personal army of minions.,summons
 Pure,Burn away corruption while mending your allies.,healer+fire
@@ -137,28 +141,27 @@ Untouchable,Your greatest defense is never being where the enemy swings.,tank
 Puppeteer,Every enemy moves exactly where you want them to.,control
 Bewildering,"Leave your enemies confused, scattered, and unable to act.",control
 Oppressive,Your enemies don't lose because they're weaker—they lose because they never get to fight.,control
+Heroic,"Save as many people as the game reasonably allows, even when it is inconvenient.",
+Greedy,"Steal, pickpocket, extort, and loot whenever the opportunity appears.",
+Merciful,Spare enemies and NPCs whenever the game gives you a meaningful option.,
+Bloodthirsty,Kill major villains and dangerous enemies instead of sparing them.,
+Treacherous,"Betray factions, bosses, or allies whenever the opportunity presents itself.",
+Naturebound,"Save the Grove and protect druids, tieflings, animals, and natural places when possible.",
+Raiding,Side against the Grove or otherwise take the crueler Act 1 route.,
+Liberating,Free the Nightsong and oppose those who would imprison her.,
+Obedient,Do not free the Nightsong; follow the darker path in the Shadow-Cursed Lands.,
+Wormy,Use tadpoles freely and unlock illithid powers as they become available.,
+Pristine,Refuse tadpoles and avoid illithid powers entirely.,
+Evolved,Accept the Astral Tadpole and lean into partial-illithid power.,
+Resistant,"Use early tadpoles if desired, but refuse the Astral Tadpole.",
+Companionable,Recruit as many companions as possible and resolve their personal quests.,
+Lonewolf,Minimize companion recruitment and handle things yourself. Do not put anyone else in danger.,
+Romantic,"Prioritize companion approval, romance scenes, and emotionally loyal choices.",
+Frugal,"Avoid buying gear unless absolutely necessary; loot, steal, craft, or scavenge instead.",
+Chaotic,Pick the funniest or most disruptive option whenever it does not end the run.,
+Secretive,"Use stealth, invisibility, disguises, and surprise whenever possible.",
+Loud,"Avoid subtlety. Kick doors open, start fights openly, and make your entrance obvious.",
+Isekaid,"You were just an ordinary person until you suddenly found yourself stranded in Faerûn. Limit meta gaming whenever possible, and only replace one equipment slot after each boss kill.",
 Otherwordly,Find the coolest weapon and/or armor mod and play with those items from the start of the game.,
-Azer-Forged,Build around Azer Warhammer and bring relentless fire-forged hammer blows to the frontline.,martial
-Deva-Touched,Make Deva Mace your signature weapon and deliver radiant judgment in melee.,martial;radiant
-Djinni-Blessed,Build around Djinni Scimitar and fight with the speed and flair of an elemental duelist.,martial
-Vortical,Make Flail of the Vortex your signature weapon and turn every melee into a violent storm.,martial
-Makeshift,Build around Makeshift Bow and prove that humble equipment can still carry a run.,ranged
-Cinderborn,Make Scimitar of Cinder your signature weapon and carve through enemies with fire at your side.,martial;fire
-Abyssal,Build around Trident of the Depths and embrace a deep-sea warrior identity.,martial;thrown
-Flamewreathed,Use Flame Blade as your signature weapon and solve close-range problems with conjured fire.,martial;caster+fire
-Ronin,"Build around Katana and fight as a disciplined, precise swordmaster.",martial
-Conductive,Make Light of Creation your signature weapon and lean into its dangerous lightning-charged power.,martial;lightning
-Scourged,"Build around Loviatar's Scourge and make pain, punishment, and brutal melee your identity.",martial
-Skull-Staving,Make Shining Staver-of-Skulls your signature weapon and bring radiant blunt-force justice.,martial;radiant
-Blooded,Build around Blooded Greataxe and stay aggressive when the fighting gets ugly.,martial
-Cacophonous,Make Cacophony your signature weapon and punctuate every melee with thunderous force.,martial;thunder
-Charge-Bound,Build around Charge-Bound Warhammer and keep its magical bond central to your combat plan.,martial
-Caustic,Make Corrosive Flail your signature weapon and batter enemies with acid-laced brutality.,martial;acid
-Cruel,Build around Cruel Sting and fight like a merciless drow blade-master.,martial
-Aged,Make Flail of Ages your signature weapon and exploit its elemental versatility whenever possible.,martial
-Moonlit,Build around Moonlight Glaive and sweep through enemies with radiant lunar power.,martial;radiant
-Ratcatching,Make Rat Bat your signature weapon and commit completely to vermin-themed blunt-force violence.,martial
-Thermodynamic,Build around Thermodynamo Axe and turn heat generation into relentless melee pressure.,martial;fire
-Thorned,"Make Thorn Blade your signature weapon and fight as a mobile, nature-touched scimitar wielder.",martial
-Ramming,Build around Staff of the Ram and use its forceful strikes to batter enemies out of position.,martial;force
-Vossian,Make Voss' Silver Sword your signature weapon and embrace a githyanki silver-sword warrior identity.,martial
+Nudist,Refuse to wear armor or clothes - it only slows you down!,
+Fisticuff,Refuse to use weapons of any kind - your body is the weapon!,
