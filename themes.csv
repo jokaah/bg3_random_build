@@ -73,7 +73,7 @@ Boomeranging,"Use returning weapons, thrown weapons, and ranged repositioning tr
 Bonking,Every serious problem should eventually meet blunt force trauma.,shillelagh;martial;improvised
 Pointy,"Favor spears, arrows, bolts, daggers, rapiers, and other piercing options.",martial;ranged;thrown
 Torchbearing,"Use torches and lanterns as your main weapons whenever possible, bringing firelight and blunt-force practicality into every fight.",martial;shillelagh
-Grenadier,"Fight with grenades, bombs, alchemical throwables, potions, elixirs and other consumable explosives whenever possible. Treat every encounter as an excuse to throw something dangerous.",thrown
+Grenadier,"Fight with grenades, bombs, alchemical throwables, potions, elixirs and other consumable explosives whenever possible. Treat every encounter as an excuse to throw something dangerous.",
 Mighty,Obtain Titanstring Bow and build around its Strength-scaling ranged damage.,ranged
 Unerring,"Build around The Dead Shot and chase accuracy, critical hits, and clean ranged kills.",ranged
 Cyclonic,Build around Nyrulna as a thrown or melee weapon and embrace thunderous chaos.,martial;thrown
@@ -107,24 +107,24 @@ Deva-Touched,Make Deva Mace your signature weapon and deliver radiant judgment i
 Djinni-Blessed,Build around Djinni Scimitar and fight with the speed and flair of an elemental duelist.,martial
 Vortical,Make Flail of the Vortex your signature weapon and turn every melee into a violent storm.,martial
 Makeshift,Build around Makeshift Bow and prove that humble equipment can still carry a run.,ranged
-Cinderborn,Make Scimitar of Cinder your signature weapon and carve through enemies with fire at your side.,martial;fire
+Cinderborn,Make Scimitar of Cinder your signature weapon and carve through enemies with fire at your side.,martial
 Abyssal,Build around Trident of the Depths and embrace a deep-sea warrior identity.,martial;thrown
-Flamewreathed,Use Flame Blade as your signature weapon and solve close-range problems with conjured fire.,martial;caster+fire
+Flamewreathed,Use Flame Blade as your signature weapon and solve close-range problems with conjured fire.,martial
 Ronin,"Build around Katana and fight as a disciplined, precise swordmaster.",martial
-Construct,Make Light of Creation your signature weapon and lean into its dangerous lightning-charged power.,martial;lightning
+Construct,Make Light of Creation your signature weapon and lean into its dangerous lightning-charged power.,martial
 Scourged,"Build around Loviatar's Scourge and make pain, punishment, and brutal melee your identity.",martial
-Skull-Staving,Make Shining Staver-of-Skulls your signature weapon and bring radiant blunt-force justice.,martial;radiant
+Skull-Staving,Make Shining Staver-of-Skulls your signature weapon and bring radiant blunt-force justice.,martial
 Blooded,Build around Blooded Greataxe and stay aggressive when the fighting gets ugly.,martial
-Cacophonous,Make Cacophony your signature weapon and punctuate every melee with thunderous force.,martial;thunder
-Charge-Bound,Build around Charge-Bound Warhammer and keep its magical bond central to your combat plan.,martial
-Caustic,Make Corrosive Flail your signature weapon and batter enemies with acid-laced brutality.,martial;acid
+Cacophonous,Make Cacophony your signature weapon and punctuate every melee with thunderous force.,martial;shillelagh
+Charge-Bound,Build around Charge-Bound Warhammer and keep its magical bond central to your combat plan.,bound
+Caustic,Make Corrosive Flail your signature weapon and batter enemies with acid-laced brutality.,martial
 Cruel,Build around Cruel Sting and fight like a merciless drow blade-master.,martial
-Aged,Make Flail of Ages your signature weapon and exploit its elemental versatility whenever possible.,martial
+Aged,Make Flail of Ages your signature weapon and exploit its elemental versatility whenever possible.,martial;tank
 Moonlit,Build around Moonlight Glaive and sweep through enemies with radiant lunar power.,martial;radiant
 Ratcatching,Make Rat Bat your signature weapon and commit completely to vermin-themed blunt-force violence.,martial
-Thermodynamic,Build around Thermodynamo Axe and turn heat generation into relentless melee pressure.,martial;fire
+Thermodynamic,Build around Thermodynamo Axe and turn heat generation into relentless melee pressure.,martial
 Thorned,"Make Thorn Blade your signature weapon and fight as a mobile, nature-touched scimitar wielder.",martial
-Ramming,Build around Staff of the Ram and use its forceful strikes to batter enemies out of position.,martial;force
+Ramming,Build around Staff of the Ram and use its forceful strikes to batter enemies out of position.,martial;shillelagh
 Vlaakith-Devout,Make Voss' Silver Sword your signature weapon and embrace Vlaakith.,martial
 Healer,Be the healer for your party.,healer
 Shadow,Use darkness and obscured areas to your advantage.,

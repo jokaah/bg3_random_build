@@ -24,7 +24,7 @@ Fighter,2,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant
 Battle Master,3;5;7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
 Champion,5;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;mobile
 Arcane Archer,5;7;11,Fighter,ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
-Eldritch Knight,7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;thrown
+Eldritch Knight,7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;thrown;bound
 Open Hand,6;9,Monk,unarmed;radiant;necrotic;psychic;force;fire;cold;lightning;improvised;mobile;control
 Shadow Monk,6;11,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile;control
 Four Elements,5;6,Monk,martial;unarmed;fire;improvised
@@ -48,10 +48,10 @@ Shadow Magic,3;6,Sorcerer,caster;fire;cold;lightning;thunder;acid;poison;radiant
 Draconic,1;6,Sorcerer,caster;fire;cold;lightning;acid;poison
 Storm,1;6,Sorcerer,caster;lightning;cold;thunder;control
 Wild Magic,3;6;11,Sorcerer,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
-Archfey,2;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;mobile
-Fiend,2;5;9,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;summons;control
-Great Old One,2;5;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force
-Hexblade,1;2;5;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force
+Archfey,2;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;mobile;bound
+Fiend,2;5;9,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;summons;control;bound
+Great Old One,2;5;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;bound
+Hexblade,1;2;5;6,Warlock,caster;martial;fire;cold;lightning;thunder;necrotic;psychic;force;bound
 Wizard,1,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;control
 Abjuration,2;6;10,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Bladesinging,6;9,Wizard,caster;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;martial;mobile
