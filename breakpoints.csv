@@ -28,7 +28,7 @@ Eldritch Knight,7;11,Fighter,martial;ranged;fire;cold;lightning;thunder;acid;poi
 Open Hand,6;9,Monk,unarmed;radiant;necrotic;psychic;force;fire;cold;lightning;improvised;mobile;control
 Shadow Monk,6;11,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile;control
 Four Elements,5;6,Monk,martial;unarmed;fire;improvised
-Drunken,6;9,Monk,martial;unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile
+Drunken,6;9,Monk,unarmed;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;improvised;mobile
 Paladin,2,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Devotion,3;5,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force
 Ancients,7,Paladin,martial;fire;cold;lightning;thunder;acid;poison;radiant;necrotic;psychic;force;healer
