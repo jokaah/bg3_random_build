@@ -18,6 +18,24 @@ MONK_SUBCLASSES = [
 ]
 
 
+# Boss weights are stored in half-major units:
+# minor = 1, major = 2, double-major = 4.
+ACT3_BOSSES = [
+    ("Raphael", 2),
+    ("Cazador", 2),
+    ("Viconia", 2),
+    ("Ansur", 2),
+    ("Lorroakan", 1),
+    ("Minsc", 2),
+    ("Steel Watch + Gortash", 4),
+    ("Ethel", 1),
+    ("Har'rak", 1),
+    ("Carrion", 1),
+]
+
+ACT3_BOSS_TARGET = 6  # 3 major-boss equivalents
+
+
 def is_yes(value):
     """Treat 'yes' as True and blanks/NaN as False."""
     if pd.isna(value):
@@ -154,6 +172,33 @@ def select_run(weapons, spells):
     return selections
 
 
+def select_act3_bosses():
+    """Pick a random boss set worth exactly 3 major-boss equivalents."""
+    valid_sets = []
+
+    # Only 9 entries, so checking every subset is simple and readable.
+    for mask in range(1, 1 << len(ACT3_BOSSES)):
+        selected = [
+            ACT3_BOSSES[i]
+            for i in range(len(ACT3_BOSSES))
+            if mask & (1 << i)
+        ]
+
+        if sum(weight for _, weight in selected) == ACT3_BOSS_TARGET:
+            valid_sets.append([name for name, _ in selected])
+
+    if not valid_sets:
+        raise RuntimeError("No valid Act 3 boss combinations found.")
+
+    return random.choice(valid_sets)
+
+
+def print_act3_bosses(bosses):
+    print("\nAct 3 bonus bosses:")
+    for boss in bosses:
+        print(f"- {boss}")
+
+
 def get_extras(extras) -> str:
     extras_str = ""
 
@@ -207,7 +252,10 @@ def main():
         )
 
     selections = select_run(weapons, spells)
+    bosses = select_act3_bosses()
+
     print_run(selections)
+    print_act3_bosses(bosses)
 
 
 if __name__ == "__main__":
